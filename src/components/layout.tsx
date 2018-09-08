@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm, scale } from '../utils/typography';
 
-class Template extends React.Component {
+class Layout extends React.Component<any, any> {
   render() {
-    const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { location, children } = this.props;
+    const rootPath = `$(window as any).{__PATH_PREFIX__}/`;
+    let header;
 
     if (location.pathname === rootPath) {
       header = (
@@ -29,7 +29,7 @@ class Template extends React.Component {
             Gatsby Starter Blog
           </Link>
         </h1>
-      )
+      );
     } else {
       header = (
         <h3
@@ -50,7 +50,7 @@ class Template extends React.Component {
             Gatsby Starter Blog
           </Link>
         </h3>
-      )
+      );
     }
     return (
       <div
@@ -64,8 +64,8 @@ class Template extends React.Component {
         {header}
         {children}
       </div>
-    )
+    );
   }
 }
 
-export default Template
+export default Layout;
