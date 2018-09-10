@@ -18,6 +18,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-mdx',
           `gatsby-plugin-typescript`,
           {
             resolve: `gatsby-remark-images`,
@@ -67,4 +68,4 @@ module.exports = {
       },
     },
   ],
-}
+};

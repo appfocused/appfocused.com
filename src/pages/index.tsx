@@ -1,75 +1,40 @@
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
-import { get } from 'lodash';
 import Helmet from 'react-helmet';
+import Hero from '../components/hero';
 
-import Bio from '../components/Bio';
-import Layout from '../components/layout';
-import { rhythm } from '../utils/typography';
-
-class BlogIndex extends React.Component<any, any> {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    );
-    const posts = get(this, 'props.data.allMarkdownRemark.edges');
-
-    return (
-      <Layout location={this.props.location}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
-        <Bio />
-        {posts.map(({ node }: any) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
-      </Layout>
-    );
-  }
+interface IProps {
+  location: {
+    pathname: string;
+  };
 }
 
-export default BlogIndex;
+const handleClick = (e: any) => {
+  e.preventDefault();
+  document.querySelector('[name=contacts]').scrollIntoView({
+    behavior: 'smooth',
+  });
+};
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            title
-          }
-        }
-      }
-    }
-  }
-`;
+export default (props: IProps) => {
+  // const data = props.data.markdownRemark;
+  return (
+    <div>
+      <Helmet>
+        <title>Appfocused: great user experiences. Implemented!</title>
+        <meta name="description" content="Appfocused" />
+      </Helmet>
+      <Hero />
+    </div>
+  );
+};
+
+// export const query = graphql`
+//   query HomeQuery {
+//     markdownRemark(frontmatter: { title: { eq: "home" } }) {
+//       html
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `;

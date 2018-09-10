@@ -15,7 +15,14 @@ declare module 'disqus-react' {
   > {}
 }
 
+declare module '*.css';
 declare module '*.jpg';
 
 declare module 'typography-theme-wordpress-2016';
 declare module 'typography';
+declare module '@mdx-js/tag';
+
+declare module '*.mdx' {
+  let MDXComponent: (props: any) => JSX.Element;
+  export default MDXComponent;
+}

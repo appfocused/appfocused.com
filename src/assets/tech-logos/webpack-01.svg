@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="931px" height="1032px" viewBox="0 0 931 1032" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>webpack-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="webpack-icon" fill-rule="nonzero" fill="#FFFFFF">
+            <path d="M901.6,795.3 L483.5,1031.8 L483.5,847.6 L744,704.3 L901.6,795.3 Z M930.2,769.4 L930.2,274.8 L777.2,363.1 L777.2,681 L930.2,769.4 Z M28.7,795.3 L446.8,1031.8 L446.8,847.6 L186.3,704.3 L28.7,795.3 L28.7,795.3 Z M0.1,769.4 L0.1,274.8 L153.1,363.1 L153.1,681 L0.1,769.4 Z M18,242.8 L446.8,0.2 L446.8,178.3 L172.1,329.4 L170,330.6 L18,242.8 L18,242.8 Z M912.3,242.8 L483.5,0.2 L483.5,178.3 L758.2,329.4 L760.3,330.6 L912.3,242.8 L912.3,242.8 Z" id="Shape" fill-opacity="0.5"></path>
+            <path d="M446.8,805.7 L189.8,664.4 L189.8,384.4 L446.8,532.8 L446.8,805.7 M483.5,805.7 L740.5,664.4 L740.5,384.4 L483.5,532.8 L483.5,805.7 M207.2,352 L465.2,210.1 L723.2,352 L465.2,501 L207.2,352" id="Shape"></path>
+        </g>
+    </g>
+</svg>
