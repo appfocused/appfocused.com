@@ -20,7 +20,7 @@ export default (props: IProps) => {
   return (
     <div>
       <Helmet>
-        <title>Appfocused: great user experiences. Implemented!</title>
+        <title>Appfocused: great user experiences. Implemented.</title>
         <meta name="description" content="Appfocused" />
       </Helmet>
       <Hero />
