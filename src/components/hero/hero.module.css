@@ -35,17 +35,17 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  li {
+  & li {
     margin: 0;
     width: 90px;
     text-align: center;
 
-    img {
+    & img {
       height: 50px;
       opacity: 0.8;
     }
 
-    span {
+    & span {
       display: block;
       visibility: hidden;
       font-family: 'Roboto Mono';
@@ -54,9 +54,14 @@
     }
 
     &:hover {
-      span {
+      & span {
         visibility: visible;
       }
     }
   }
+}
+
+.item {
+  display: flex;
+  flex-flow: row wrap;
 }

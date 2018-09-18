@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import Hero from '../components/hero';
+import Layout from '../components/layout/layout';
 
 interface IProps {
   location: {
@@ -11,19 +12,22 @@ interface IProps {
 const handleClick = (e: any) => {
   e.preventDefault();
   document.querySelector('[name=contacts]').scrollIntoView({
-    behavior: 'smooth',
+    behavior: 'smooth'
   });
 };
 
 export default (props: IProps) => {
+  console.log(props);
   // const data = props.data.markdownRemark;
   return (
     <div>
-      <Helmet>
-        <title>Appfocused: great user experiences. Implemented!</title>
-        <meta name="description" content="Appfocused" />
-      </Helmet>
-      <Hero />
+      <Layout>
+        <Helmet>
+          <title>Appfocused: great user experiences. Implemented</title>
+          <meta name="description" content="Appfocused" />
+        </Helmet>
+        <Hero />
+      </Layout>
     </div>
   );
 };

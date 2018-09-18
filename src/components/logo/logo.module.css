@@ -1,0 +1,26 @@
+.logo {
+  text-decoration: none;
+  font-family: 'Roboto Mono';
+  font-size: 1.8rem;
+  background-color: transparent;
+  padding: 10px 20px;
+  transition: 1s;
+
+  & .logo--primary {
+    color: var(--primary-logo-color);
+  }
+
+  & .logo--secondary {
+    color: var(--secondary-logo-color);
+  }
+
+  & .logo--default {
+    color: var(--default-logo-color);
+  }
+}
+
+:global {
+  .scrolled .logo {
+    background-color: #380d42;
+  }
+}

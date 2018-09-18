@@ -1,0 +1,41 @@
+@import '../../styles/base.css';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  height: 100vh;
+
+  grid-template-areas:
+    'main'
+    'footer';
+
+  grid-template-rows: 1fr auto-fit;
+  background-color: #fff;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  padding: 20px 0;
+  text-align: center;
+  background: url('../../assets/polygons.jpg') bottom center;
+
+  & p {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+}
