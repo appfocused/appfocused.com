@@ -7,6 +7,21 @@
     "url": "https://github.com/appfocused/appfocused.com/issues"
   },
   "dependencies": {
+    "loader-utils": "^1.1.0",
+    "lodash": "^4.17.11",
+    "prismjs": "^1.15.0",
+    "react": "^16.5.1",
+    "react-burger-menu": "^2.5.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "sanitize.css": "^7.0.3",
+    "typeface-merriweather": "0.0.43",
+    "typeface-montserrat": "0.0.43",
+    "typography": "^0.16.17",
+    "typography-theme-wordpress-2016": "^0.15.10"
+  },
+  "devDependencies": {
     "@mdx-js/loader": "^0.15.2",
     "gatsby": "next",
     "gatsby-plugin-feed": "next",
@@ -24,21 +39,6 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
-    "loader-utils": "^1.1.0",
-    "lodash": "^4.17.5",
-    "prismjs": "^1.15.0",
-    "react": "^16.4.2",
-    "react-burger-menu": "^2.5.2",
-    "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.13",
-    "sanitize.css": "^7.0.3",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
-    "typography": "^0.16.17",
-    "typography-theme-wordpress-2016": "^0.15.10"
-  },
-  "devDependencies": {
     "@mdx-js/mdx": "^0.15.2",
     "@mdx-js/tag": "^0.15.0",
     "@types/lodash": "^4.14.116",
@@ -72,12 +72,10 @@
   "scripts": {
     "start": "gatsby develop",
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }

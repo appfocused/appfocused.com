@@ -17,7 +17,6 @@ const handleClick = (e: any) => {
 };
 
 export default (props: IProps) => {
-  console.log(props);
   // const data = props.data.markdownRemark;
   return (
     <div>
