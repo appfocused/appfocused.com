@@ -37,6 +37,7 @@ const Hero = () => (
   <section className={styles.hero}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className={styles.header}>Great user experiences. Implemented.</div>
     <div className={styles.subheader}>
 =======
@@ -44,6 +45,9 @@ const Hero = () => (
 =======
     <h1 className={styles.header}>Great user experiences. Implemented!</h1>
 >>>>>>> adds mdx and postcss
+=======
+    <h1 className={styles.header}>Great user experiences. Implemented.</h1>
+>>>>>>> adds header logo, typography
     <h3 className={styles.subheader}>
 >>>>>>> Working mdx and postcss
       we&nbsp;know the ropes of&nbsp;front&#8209;end&nbsp;development
