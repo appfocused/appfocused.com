@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './layout.module.css';
 import HeaderNavigation from '../header-navigation';
+import Menu from '../menu';
 
 interface IProps extends React.HTMLProps<HTMLDivElement> {
   children: any;
@@ -56,6 +57,7 @@ export default class DefaultLayout extends React.PureComponent<
         id="outer-container"
         className={this.state.scrolled ? 'scrolled' : ''}
       >
+        <Menu />
         <div id="page-wrap" className="container">
           <header>
             <HeaderNavigation />

@@ -20,7 +20,7 @@
 }
 
 :global {
-  .scrolled .logo {
+  & .scrolled .logo {
     background-color: #380d42;
   }
 }
