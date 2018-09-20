@@ -1,0 +1,88 @@
+@import '../styles/_mq.css';
+
+.img {
+  width: 100%;
+  padding: 20px;
+  display: none;
+}
+
+@media (--phablet-viewport) {
+  .img {
+    display: block;
+  }
+}
+
+.cta {
+  border: 2px solid #8e44ad;
+  color: #8e44ad;
+  font-family: 'Roboto';
+  background: transparent;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: #f39c12;
+    background: #f39c12;
+    color: #fff;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  & label {
+    font-size: 1.2rem;
+  }
+
+  & input,
+  & textarea {
+    display: block;
+  }
+
+  & input,
+  & textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(238, 238, 238);
+    color: #444;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (--phablet-viewport) {
+  .form input,
+  .form textarea {
+    width: 50vw;
+  }
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 50px;
+}
+
+.icon--design {
+  background-image: url('../assets/design.svg');
+}
+
+.icon--quality {
+  background-image: url('../assets/quality.svg');
+}
+
+.icon--code {
+  background-image: url('../assets/code.svg');
+}
