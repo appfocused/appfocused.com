@@ -1,0 +1,18 @@
+@import '../../styles/_variables.css';
+
+.section {
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: var(--grid-gap);
+  padding-left: var(--grid-gap);
+}
+
+.full-width {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}

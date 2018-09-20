@@ -1,0 +1,6 @@
+@import '../../styles/_variables.css';
+
+.wrapper {
+  display: grid;
+  grid-gap: var(--grid-gap);
+}
