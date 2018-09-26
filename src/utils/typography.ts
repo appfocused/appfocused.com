@@ -12,7 +12,7 @@ theme.overrideThemeStyles = () => ({
 const typography = new (Typography as any)({
   title: 'Appfocused',
   baseFontSize: '16px',
-  baseLineHeight: 1.6,
+  baseLineHeight: 1.75,
   scaleRatio: 4.5,
   googleFonts: [
     {
@@ -26,8 +26,12 @@ const typography = new (Typography as any)({
   ],
   headerFontFamily: ['Roboto', 'sans-serif'],
   bodyFontFamily: ['sans-serif'],
+  bodyColor: 'hsla(0,0%, 0%, 0.9)',
+  bodyWeight: 300,
   includeNormalize: false
 });
+
+console.log(typography.rhythm);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

@@ -8,6 +8,7 @@ class Layout extends React.Component<any, any> {
   render() {
     const { location, children } = this.props;
     const rootPath = `$(window as any).{__PATH_PREFIX__}/`;
+    const isHome = location.pathname === rootPath;
     let header;
 
     if (location.pathname === rootPath) {

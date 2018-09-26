@@ -4,6 +4,9 @@ import HeaderNavigation from '../header-navigation';
 import Menu from '../menu';
 
 interface IProps extends React.HTMLProps<HTMLDivElement> {
+  location: {
+    pathname: string;
+  };
   children: any;
 }
 

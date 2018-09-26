@@ -1,5 +1,3 @@
-@import '../../styles/_variables.css';
-
 .menu-item {
   text-decoration: none;
   color: var(--menu-item-color);

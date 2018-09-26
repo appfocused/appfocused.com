@@ -3,8 +3,7 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { get } from 'lodash';
 
-import Bio from '../components/Bio';
-import Layout from '../components/layout';
+import Layout from '../components/layout/layout';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component<any, any> {
@@ -38,7 +37,6 @@ class BlogPostTemplate extends React.Component<any, any> {
             marginBottom: rhythm(1)
           }}
         />
-        <Bio />
 
         <ul
           style={{
