@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as styles from './Hero.module.css';
+import * as styles from './hero.module.css';
 
 const reactLogo = require('../../assets/tech-logos/react-01.svg');
 const reduxLogo = require('../../assets/tech-logos/redux-01.svg');
