@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 
 import Bio from '../../components/Bio';
 import Layout from '../../components/layout/layout';
-import { rhythm } from '../../utils/typography';
 
 interface Props {
   posts: any;
@@ -33,11 +32,7 @@ class Home extends React.Component<Props> {
           const title = get(node, 'frontmatter.title') || node.fields.slug;
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4)
-                }}
-              >
+              <h3>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>

@@ -4,20 +4,38 @@
 
 html {
   box-sizing: border-box;
-  font-size: 50%;
+  font-size: 100%;
   line-height: 1.6;
   max-width: 100%;
   height: 100%;
 }
 
-@media (--phablet-viewport) {
+/* @media (--phablet-viewport) {
   html {
     font-size: 62.5%;
   }
+} */
+
+:root {
+  --font-diff: var(--max-font-size) - var(--min-font-size);
+  --content-diff: var(--max-content-width) - var(--min-content-width);
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1rem;
+
+  @media screen and (min-width: 20em) {
+    font-size: calc(
+      var(--min-font-size) * 1px + (var(--max-font-size) - var(--min-font-size)) *
+        (100vw - var(--min-content-width) * 1px) /
+        (var(--max-content-width) - var(--min-content-width))
+    );
+  }
+
+  @media screen and (min-width: 70em) {
+    font-size: 1.375rem;
+  }
+
   height: 100%;
 }
 

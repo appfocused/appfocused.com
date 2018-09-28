@@ -1,0 +1,6 @@
+:root {
+  --min-content-width: 320;
+  --max-content-width: 1600;
+
+  --grid-gap: 40px;
+}
