@@ -3,9 +3,19 @@
   --menu-item-color: #ecf0f1;
   --menu-item-hover: #f1d87b;
 
-  --primary-logo-color: #84d5f7;
-  --secondary-logo-color: #dcdda4;
-  --default-logo-color: #fff;
-
   --header-color: #333;
+  --base-font-color: #333;
+}
+
+body {
+  color: var(--base-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-color);
 }

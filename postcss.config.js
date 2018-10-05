@@ -5,7 +5,6 @@ const customMedia = require('postcss-custom-media');
 const cssImport = require('postcss-import');
 
 const nested = require('postcss-nested');
-const pxToRem = require('postcss-pxtorem');
 const reporter = require('postcss-reporter');
 const simpleVars = require('postcss-simple-vars');
 const url = require('postcss-url');
@@ -31,7 +30,6 @@ module.exports = () => ({
     nested(),
     browserReporter(),
     reporter(),
-    // pxToRem(),
     autoprefixer()
   ]
 });

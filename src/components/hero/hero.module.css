@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8rem 4rem 2rem 4rem;
+  padding: 4rem 2rem 1rem 2rem;
   background-color: #511149;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('../../assets/polygons.jpg');
@@ -14,17 +14,33 @@
   background-size: cover;
   background-position: center center;
   overflow: hidden;
+
+  @media screen and (min-width: 40em) {
+    background-attachment: fixed;
+  }
 }
 
 .header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  kerning: auto;
+  text-rendering: optimizeLegibility;
+  font-size: var(--h1-font-size);
+
   max-width: 700px;
   color: #fff;
-  font-weight: 700;
+  line-height: 1.1;
+  margin-top: calc(var(--base-line-height) * 1rem);
+  hyphens: manual;
 }
 
 .subheader {
   color: #f0d876;
   font-family: 'Roboto Mono';
+  font-weight: 400;
+  font-size: calc(var(--base-font-size) * 1.1);
+  margin-top: calc(var(--base-line-height) * 2rem);
+  margin-bottom: 1rem;
 }
 
 .tech {
@@ -37,11 +53,13 @@
 
   & li {
     margin: 0;
-    width: 90px;
+    width: 6rem;
     text-align: center;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
 
     & img {
-      height: 50px;
+      height: 3rem;
       opacity: 0.8;
     }
 
@@ -50,7 +68,7 @@
       visibility: hidden;
       font-family: 'Roboto Mono';
       font-weight: 300;
-      font-size: 1.4rem;
+      font-size: var(--small-font-size);
     }
 
     &:hover {

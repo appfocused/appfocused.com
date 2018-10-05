@@ -61,6 +61,21 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [
+            'Roboto',
+            'Roboto Mono',
+            'Montserrat',
+            'Open Sans',
+            'Alegreya Sans',
+            'Lato'
+          ]
+        }
+      }
+    }
   ]
 };
