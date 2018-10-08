@@ -1,6 +1,7 @@
 :root {
   --min-content-width: 20;
   --max-content-width: 75;
+  --max-blog-content-width: 65;
 
   --grid-gap: 2.5rem;
   --spacing-unit: 0.5rem;
@@ -45,11 +46,6 @@ p {
 }
 
 
-p:last-child {
+p:last-of-type:not(:only-of-type) {
   margin-bottom: calc(var(--base-line-height) * 2rem);
-}
-
-p.no-vertical-margin {
-    margin-bottom: 0;
-  }
 }

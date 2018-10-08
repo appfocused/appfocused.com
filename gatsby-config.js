@@ -1,17 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/'
+    title: 'Appfocused',
+    author: 'Vitaly Kondratiev',
+    description: 'Great user experiences. Implemented.',
+    siteUrl: 'https://appfocused.com'
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data`,
         name: 'data'
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/assets`
       }
     },
     {
@@ -39,8 +48,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -66,14 +73,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: [
-            'Roboto',
-            'Roboto Mono',
-            'Montserrat',
-            'Open Sans',
-            'Alegreya Sans',
-            'Lato'
-          ]
+          families: ['Roboto', 'Roboto Mono']
         }
       }
     }

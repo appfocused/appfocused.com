@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const Promise = require('bluebird');
 const path = require('path');
+const GatsbyImageSharpSizes = require('gatsby-image').GatsbyImageSharpSizes;
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = ({ graphql, actions }) => {
@@ -49,8 +50,8 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug: post.node.fields.slug,
               previous,
-              next,
-            },
+              next
+            }
           });
         });
       })
@@ -66,7 +67,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     });
   }
 };

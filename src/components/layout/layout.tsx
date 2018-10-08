@@ -1,8 +1,10 @@
 import * as React from 'react';
-import './layout.module.css';
+import Helmet from 'react-helmet';
 import HeaderNavigation from '../header-navigation';
 import Menu from '../menu';
 import Footer from '../footer';
+
+import './layout.module.css';
 
 interface IProps extends React.HTMLProps<HTMLDivElement> {
   location: {
@@ -61,6 +63,11 @@ export default class DefaultLayout extends React.PureComponent<
         id="outer-container"
         className={this.state.scrolled ? 'scrolled' : ''}
       >
+        <Helmet
+          meta={[
+            { name: 'viewport', content: 'initial-scale=1, viewport-fit=cover' }
+          ]}
+        />
         <Menu />
         <div id="page-wrap" className="container">
           <header>
