@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { get } from 'lodash';
 import Img from 'gatsby-image';
+import ReactDisqusComments from 'react-disqus-comments';
 
 import Layout from '../components/layout/layout';
 import Section from '../components/section';
@@ -16,7 +17,7 @@ class BlogPostTemplate extends React.Component<any, any> {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteDescription = post.excerpt;
     const { previous, next } = this.props.pageContext;
-    console.log(this.props);
+    console.log(this.props, ReactDisqusComments);
 
     return (
       <Layout location={this.props.location}>
@@ -43,6 +44,13 @@ class BlogPostTemplate extends React.Component<any, any> {
           <p>{post.frontmatter.date}</p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
+          <ReactDisqusComments
+            shortname="appfocused"
+            identifier={`appfocused${this.props.location.pathname}`}
+            title={post.frontmatter.title}
+            url={`https://appfocused.com${this.props.location.pathname}`}
+            onNewComment={() => {}}
+          />
 
           <ul
             style={{

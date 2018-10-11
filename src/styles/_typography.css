@@ -18,6 +18,9 @@
   );
   --h3-font-size: calc(var(--base-font-size) * var(--modular-scale));
   --small-font-size: calc(var(--base-font-size) / var(--modular-scale));
+  --code-font-size: calc(
+    var(--base-font-size) / var(--modular-scale) / var(--modular-scale)
+  );
 
   @media screen and (min-width: 20em) {
     --base-font-size: calc(
@@ -74,4 +77,8 @@ p {
 }
 
 a[href] {
+}
+
+code {
+  font-size: var(--small-font-size);
 }
