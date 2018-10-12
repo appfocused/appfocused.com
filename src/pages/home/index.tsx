@@ -5,7 +5,6 @@ import Layout from '../../components/layout/layout';
 import Section from '../../components/section';
 import Grid from '../../components/grid';
 import ExpertsContent from './experts.mdx';
-import ArchitectureServiceContent from './services-arch.mdx';
 
 import * as styles from './index.module.css';
 

@@ -7,6 +7,7 @@ interface IProps {
   isFullWidth?: boolean;
   isBlog?: boolean;
   backgroundStyle?: any;
+  style?: any;
 }
 
 const Section = (props: IProps) => {

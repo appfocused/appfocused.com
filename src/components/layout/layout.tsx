@@ -7,7 +7,7 @@ import Footer from '../footer';
 import './layout.module.css';
 
 interface IProps extends React.HTMLProps<HTMLDivElement> {
-  location: {
+  location?: {
     pathname: string;
   };
   children: any;
