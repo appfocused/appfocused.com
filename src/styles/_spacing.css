@@ -1,0 +1,51 @@
+:root {
+  --min-content-width: 20;
+  --max-content-width: 75;
+  --max-blog-content-width: 65;
+
+  --grid-gap: 2.5rem;
+  --spacing-unit: 0.5rem;
+
+  --min-line-height: calc(var(--min-font-size) * 1.4);
+  --max-line-height: calc(var(--min-font-size) * 1.6);
+  --base-line-height: var(--min-line-height);
+
+  @media screen and (min-width: 20em) {
+    --base-line-height: calc(var(--min-line-height) * 1rem + (var(--max-line-height) - var(--min-line-height)) *
+            (100vw - var(--min-content-width) * 1rem) /
+            (var(--max-content-width) - var(--min-content-width))
+        )
+    );
+  }
+
+  @media screen and (min-width: 70em) {
+    --base-line-height: var(--max-line-height);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.5;
+  margin-bottom: calc(var(--base-line-height) * 1rem);
+}
+
+body {
+  line-height: var(--base-line-height);
+  max-width: 100%;
+  height: 100%;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: calc(var(--base-line-height) * 1rem);
+}
+
+
+p:last-of-type:not(:only-of-type) {
+  margin-bottom: calc(var(--base-line-height) * 2rem);
+}

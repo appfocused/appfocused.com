@@ -4,8 +4,7 @@ import { get } from 'lodash';
 import Helmet from 'react-helmet';
 
 import Bio from '../../components/Bio';
-import Layout from '../../components/layout';
-import { rhythm } from '../../utils/typography';
+import Layout from '../../components/layout/layout';
 
 interface Props {
   posts: any;
@@ -29,16 +28,11 @@ class Home extends React.Component<Props> {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <Bio />
         {posts.map(({ node }: any) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug;
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+              <h3>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>

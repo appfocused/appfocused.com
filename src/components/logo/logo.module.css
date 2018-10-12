@@ -1,0 +1,31 @@
+.logo {
+  --primary-logo-color: #84d5f7;
+  --secondary-logo-color: #dcdda4;
+  --default-logo-color: #fff;
+  --logo-background: #380d42;
+
+  text-decoration: none;
+  font-family: 'Roboto Mono';
+  font-size: var(--base-font-size);
+  background-color: transparent;
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+  transition: 1s;
+
+  & .logo--primary {
+    color: var(--primary-logo-color);
+  }
+
+  & .logo--secondary {
+    color: var(--secondary-logo-color);
+  }
+
+  & .logo--default {
+    color: var(--default-logo-color);
+  }
+}
+
+:global {
+  & .scrolled .logo {
+    background-color: var(--logo-background);
+  }
+}

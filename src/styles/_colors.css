@@ -1,0 +1,21 @@
+:root {
+  --menu-background-color: #491253;
+  --menu-item-color: #ecf0f1;
+  --menu-item-hover: #f1d87b;
+
+  --header-color: #333;
+  --base-font-color: #333;
+}
+
+body {
+  color: var(--base-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-color);
+}

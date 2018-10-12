@@ -1,0 +1,13 @@
+.footer {
+  grid-area: footer;
+  padding: 20px 0;
+  text-align: center;
+  background: url('../../assets/polygons.jpg') bottom center;
+
+  & p {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-size: var(--small-font-size);
+  }
+}

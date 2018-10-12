@@ -1,0 +1,84 @@
+:root {
+  --min-font-size: 1;
+  --max-font-size: 1.25;
+
+  --body-font: 'Roboto', system-ui, -apple-system;
+  --heading-font: 'Roboto', system-ui, -apple-system;
+
+  --base-font-size: calc(var(--min-font-size) * 1rem);
+  --base-font-weight: 400;
+  --modular-scale: 1.25;
+
+  --h1-font-size: calc(
+    var(--base-font-size) * var(--modular-scale) * var(--modular-scale) *
+      var(--modular-scale)
+  );
+  --h2-font-size: calc(
+    var(--base-font-size) * var(--modular-scale) * var(--modular-scale)
+  );
+  --h3-font-size: calc(var(--base-font-size) * var(--modular-scale));
+  --small-font-size: calc(var(--base-font-size) / var(--modular-scale));
+  --code-font-size: calc(
+    var(--base-font-size) / var(--modular-scale) / var(--modular-scale)
+  );
+
+  @media screen and (min-width: 20em) {
+    --base-font-size: calc(
+      var(--min-font-size) * 1rem +
+        (var(--max-font-size) - var(--min-font-size)) *
+        (100vw - var(--min-content-width) * 1rem) /
+        (var(--max-content-width) - var(--min-content-width))
+    );
+  }
+
+  @media screen and (min-width: 70em) {
+    --base-font-size: calc(var(--max-font-size) * 1rem);
+    --base-font-weight: 500;
+  }
+}
+
+body {
+  hyphens: auto;
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  hyphens: manual;
+}
+
+h1,
+.heading1 {
+  font-size: var(--h1-font-size);
+}
+
+h2,
+.heading2 {
+  font-size: var(--h2-font-size);
+}
+
+h3,
+.heading3 {
+  font-size: var(--h3-font-size);
+}
+
+p {
+  font-size: var(--base-font-size);
+}
+
+a[href] {
+}
+
+code {
+  font-size: var(--small-font-size);
+}
