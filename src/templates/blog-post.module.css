@@ -32,3 +32,16 @@
     text-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
   }
 }
+
+.heading {
+  position: absolute;
+  color: #fff;
+
+  top: 33%;
+  text-align: center;
+  padding: 2rem;
+  left: 0;
+  right: 0;
+
+  text-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+}

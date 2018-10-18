@@ -50,7 +50,11 @@
     padding: 0.8em;
   }
 
+<<<<<<< HEAD
   & .bm-item a {
+=======
+  & .bm-item {
+>>>>>>> blog and menu improvements
     color: var(--menu-item-color);
     text-decoration: none;
 
@@ -58,6 +62,7 @@
       color: var(--menu-item-hover);
       text-decoration: underline;
     }
+<<<<<<< HEAD
 
     &[aria-current] {
       position: relative;
@@ -73,10 +78,24 @@
         color: rgba(255, 255, 255, 0.3);
       }
     }
+=======
+>>>>>>> blog and menu improvements
   }
 
   /* Styling of overlay */
   & .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.active-menu {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '>';
+    left: -25px;
+    text-decoration: none;
+    font-family: 'Roboto Mono';
+    color: rgba(255, 255, 255, 0.3);
   }
 }

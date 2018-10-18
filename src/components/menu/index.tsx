@@ -1,7 +1,11 @@
 import * as React from 'react';
 import * as styles from './menu.module.css';
 import { elastic as ElasticMenu } from 'react-burger-menu';
+<<<<<<< HEAD
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+=======
+import { Link } from 'gatsby';
+>>>>>>> blog and menu improvements
 
 const menuItems = [
   {
@@ -37,12 +41,24 @@ class Menu extends React.Component<{}, { isOpen: boolean }> {
         >
           {menuItems.map(({ name, href, icon }, index) => {
             return (
+<<<<<<< HEAD
               <div className={styles['menu-item']} key={`menu-${index}`}>
                 <AniLink cover direction="left" to={href} duration={1.5}>
                   <i className={`fa fa-fw ${icon}`} />
                   {name}
                 </AniLink>
               </div>
+=======
+              <Link
+                className={styles['menu-item']}
+                to={href}
+                key={`menu-${index}`}
+                activeClassName={styles.activeMenu}
+              >
+                <i className={`fa fa-fw ${icon}`} />
+                {name}
+              </Link>
+>>>>>>> blog and menu improvements
             );
           })}
         </ElasticMenu>

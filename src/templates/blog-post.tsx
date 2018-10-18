@@ -21,6 +21,10 @@ class BlogPostTemplate extends React.Component<any, any> {
     const featuredImage = post.frontmatter.featuredImage
       ? post.frontmatter.featuredImage.childImageSharp.sizes
       : this.props.data.defaultFeaturedImage.childImageSharp.sizes;
+<<<<<<< HEAD
+=======
+    console.log(this.props, ReactDisqusComments);
+>>>>>>> blog and menu improvements
 
     return (
       <Layout location={this.props.location}>
@@ -31,12 +35,19 @@ class BlogPostTemplate extends React.Component<any, any> {
         />
         <div style={{ position: 'relative' }}>
           <Img className={styles.bgImage} sizes={featuredImage} />
+<<<<<<< HEAD
           <div className={styles.heading}>
             <h1>{post.frontmatter.title}</h1>
             <small>{post.frontmatter.date}</small>
           </div>
         </div>
         <Section isBlog>
+=======
+          <h1 className={styles.heading}>{post.frontmatter.title}</h1>
+        </div>
+        <Section isBlog>
+          <p>{post.frontmatter.date}</p>
+>>>>>>> blog and menu improvements
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <ReactDisqusComments
