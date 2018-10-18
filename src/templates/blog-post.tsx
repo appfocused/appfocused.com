@@ -17,6 +17,9 @@ class BlogPostTemplate extends React.Component<any, any> {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteDescription = post.excerpt;
     const { previous, next } = this.props.pageContext;
+    const featuredImage = post.frontmatter.featuredImage
+      ? post.frontmatter.featuredImage.childImageSharp.sizes
+      : this.props.data.defaultFeaturedImage.childImageSharp.sizes;
     console.log(this.props, ReactDisqusComments);
 
     return (
@@ -26,21 +29,11 @@ class BlogPostTemplate extends React.Component<any, any> {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <div>
-          {post.frontmatter.featuredImage ? (
-            <Img
-              className={styles.bgImage}
-              sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-            />
-          ) : (
-            <Img
-              className={styles.bgImage}
-              sizes={this.props.data.defaultFeaturedImage.childImageSharp.sizes}
-            />
-          )}
+        <div style={{ position: 'relative' }}>
+          <Img className={styles.bgImage} sizes={featuredImage} />
+          <h1 className={styles.heading}>{post.frontmatter.title}</h1>
         </div>
         <Section isBlog>
-          <h1>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />

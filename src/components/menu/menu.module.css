@@ -1,14 +1,3 @@
-.menu-item {
-  text-decoration: none;
-  color: var(--menu-item-color);
-  font-size: 2rem;
-  margin-bottom: 10px;
-
-  &:hover {
-    color: var(--menu-item-hover);
-  }
-}
-
 :global {
   /* Position and sizing of burger button */
   & .bm-burger-button {
@@ -34,6 +23,8 @@
   & .bm-cross-button {
     height: 24px;
     width: 24px;
+    right: 1rem;
+    top: 1rem;
   }
 
   /* Color/shape of close button cross */
@@ -59,8 +50,30 @@
     padding: 0.8em;
   }
 
+  & .bm-item {
+    color: var(--menu-item-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--menu-item-hover);
+      text-decoration: underline;
+    }
+  }
+
   /* Styling of overlay */
   & .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.active-menu {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '>';
+    left: -25px;
+    text-decoration: none;
+    font-family: 'Roboto Mono';
+    color: rgba(255, 255, 255, 0.3);
   }
 }
