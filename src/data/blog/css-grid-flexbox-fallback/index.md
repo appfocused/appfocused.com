@@ -1,10 +1,8 @@
 ---
 title: Simple CSS Grid with flexbox fallback
 date: "2018-10-12T21:11:11.111Z"
-<<<<<<< HEAD
 featuredImage: "./grid.jpg"
-=======
->>>>>>> blog and menu improvements
+>>>>>>> working blogging and google analytics
 tags: ["ui dev", "layout", "css grid"]
 ---
 
@@ -52,11 +50,7 @@ If you are using preprocessor that supports nesting (e.g. SASS / LESS / postcss-
 .panel {
   display: grid;
   grid-template-columns: minmax(320px, 2fr) minmax(320px, 1fr);
-<<<<<<< HEAD
   grid-gap: var(--grid-gap);
-=======
-  grid-gap: $grid-gap;
->>>>>>> blog and menu improvements
   min-height: 0;
   min-width: 0;
 
