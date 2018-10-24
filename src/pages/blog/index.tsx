@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { get } from 'lodash';
 import Helmet from 'react-helmet';
 
-import Bio from '../../components/Bio';
 import Layout from '../../components/layout/layout';
+import Section from '../../components/section';
+
+import * as styles from './blog.module.css';
 
 interface Props {
   posts: any;
@@ -14,12 +17,15 @@ interface Props {
 
 class Home extends React.Component<Props> {
   render() {
+    console.log(this.props);
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
     );
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
+    const featuredImage = this.props.data.defaultFeaturedImage.childImageSharp
+      .sizes;
 
     return (
       <Layout location={this.props.location}>
@@ -28,20 +34,31 @@ class Home extends React.Component<Props> {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        {posts.map(({ node }: any) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
+        <div style={{ position: 'relative' }}>
+          <Img className={styles.bgImage} sizes={featuredImage} />
+          <div className={styles.heading}>
+            <h1>Blog</h1>
+          </div>
+        </div>
+        <Section isBlog>
+          {posts.map(({ node }: any) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug;
+            return (
+              <div key={node.fields.slug}>
+                <small>{node.frontmatter.date}</small>
+                <h3>
+                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <p
+                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                  className={styles.excerpt}
+                />
+              </div>
+            );
+          })}
+        </Section>
       </Layout>
     );
   }
@@ -57,10 +74,17 @@ export const pageQuery = graphql`
         description
       }
     }
+    defaultFeaturedImage: file(relativePath: { eq: "polygons.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 700) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 280)
           fields {
             slug
           }

@@ -63,6 +63,7 @@ class Layout extends React.Component<any, any> {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
+        <div>test</div>
         {header}
         {children}
       </div>

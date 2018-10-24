@@ -49,3 +49,7 @@ p {
 p:last-of-type:not(:only-of-type) {
   margin-bottom: calc(var(--base-line-height) * 2rem);
 }
+
+P+h2, p+h3, [data-language]+h2 {
+  margin-top: 3rem;
+}
