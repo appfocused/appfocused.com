@@ -36,6 +36,7 @@ class BlogPostTemplate extends React.Component<any, any> {
         <div style={{ position: 'relative' }}>
           <Img className={styles.bgImage} sizes={featuredImage} />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className={styles.heading}>
             <h1>{post.frontmatter.title}</h1>
             <small>{post.frontmatter.date}</small>
@@ -44,6 +45,11 @@ class BlogPostTemplate extends React.Component<any, any> {
         <Section isBlog>
 =======
           <h1 className={styles.heading}>{post.frontmatter.title}</h1>
+=======
+          <div className={styles.heading}>
+            <h1>{post.frontmatter.title}</h1>
+          </div>
+>>>>>>> centered blog title
         </div>
         <Section isBlog>
           <p>{post.frontmatter.date}</p>
