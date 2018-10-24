@@ -3,6 +3,9 @@
   --menu-item-color: #ecf0f1;
   --menu-item-hover: #f1d87b;
 
+  --link-color: #333;
+  --link-hover-color: #380d42;
+
   --header-color: #333;
   --base-font-color: #333;
 }
@@ -18,4 +21,12 @@ h4,
 h5,
 h6 {
   color: var(--header-color);
+}
+
+a {
+  color: var(--link-color);
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
 }

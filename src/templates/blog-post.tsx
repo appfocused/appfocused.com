@@ -20,7 +20,6 @@ class BlogPostTemplate extends React.Component<any, any> {
     const featuredImage = post.frontmatter.featuredImage
       ? post.frontmatter.featuredImage.childImageSharp.sizes
       : this.props.data.defaultFeaturedImage.childImageSharp.sizes;
-    console.log(this.props, ReactDisqusComments);
 
     return (
       <Layout location={this.props.location}>
@@ -33,10 +32,10 @@ class BlogPostTemplate extends React.Component<any, any> {
           <Img className={styles.bgImage} sizes={featuredImage} />
           <div className={styles.heading}>
             <h1>{post.frontmatter.title}</h1>
+            <small>{post.frontmatter.date}</small>
           </div>
         </div>
         <Section isBlog>
-          <p>{post.frontmatter.date}</p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <ReactDisqusComments
