@@ -14,13 +14,21 @@
 
 .heading {
   position: absolute;
-  color: #fff;
 
-  top: 33%;
-  text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem 2rem 2rem;
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
 
-  text-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  & > * {
+    color: #fff;
+    text-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+  }
 }
