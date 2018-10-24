@@ -49,7 +49,7 @@ If you are using preprocessor that supports nesting (e.g. SASS / LESS / postcss-
 .panel {
   display: grid;
   grid-template-columns: minmax(320px, 2fr) minmax(320px, 1fr);
-  grid-gap: $grid-gap;
+  grid-gap: var(--grid-gap);
   min-height: 0;
   min-width: 0;
 
