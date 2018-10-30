@@ -30,3 +30,16 @@ a {
     color: var(--link-hover-color);
   }
 }
+
+/* Text and background color for light mode */
+body {
+  color: #000;
+}
+
+/* Text and background color for dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background-color: #333;
+  }
+}
