@@ -11,7 +11,7 @@ I tried it out and wrote a blogpost on how to quickly set up an app with my favo
 
 * **Typescript** for eloquent and less error prone JS;
 * **CSS Modules** for encapsulated styles;
-* **Jest** and **Ezyme** for unit testing.
+* **Jest** and **Enzyme** for unit testing.
 
 Since that time zero config became a trend. [Create React App](https://github.com/facebookincubator/create-react-app), a CLI tool that helps JavaScript developers create react apps with no build configuration, moved in the similar direction but required more config and effectively "ejection" to come up with a list of tooling above.  
 
@@ -46,9 +46,10 @@ npm install enzyme enzyme-adapter-react-16 react-test-renderer -S
 npm i @types/enzyme -D
 ```
 
+  
 Create `src/setupTests.ts`
 
-```ts
+```typescript
 import { configure } from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
