@@ -13,6 +13,7 @@ I tried it out and wrote a blogpost on how to quickly set up an app with my favo
 * **CSS Modules** for encapsulated styles;
 * **Jest** and **Enzyme** for unit testing.
 
+
 Since that time zero config became a trend. [Create React App](https://github.com/facebookincubator/create-react-app), a CLI tool that helps JavaScript developers create react apps with no build configuration, moved in the similar direction but required more config and effectively "ejection" to come up with a list of tooling above.  
 
 Since CRA v2, CSS modules are supported out of the box. React scripts allow to extend initial CRA setup and add any custom boilerplate onboard.
@@ -45,11 +46,11 @@ npx create-react-app react-ts --scripts-version=react-scripts-ts@next
 npm install enzyme enzyme-adapter-react-16 react-test-renderer -S
 npm i @types/enzyme -D
 ```
-
   
 Create `src/setupTests.ts`
 
 ```typescript
+
 import { configure } from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
