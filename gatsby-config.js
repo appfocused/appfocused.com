@@ -58,13 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Appfocused: Great user experiences. Implemented.`,
+        short_name: `Appfocused`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`
+        icon: `./static/apple-icon-152x152.png`
       }
     },
     `gatsby-plugin-offline`,
@@ -74,6 +74,39 @@ module.exports = {
       options: {
         google: {
           families: ['Roboto', 'Roboto Mono']
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './static/apple-icon-152x152.png',
+
+        // WebApp Manifest Configuration
+        appName: null, // Inferred with your package.json
+        appDescription: null,
+        developerName: null,
+        developerURL: null,
+        dir: 'auto',
+        lang: 'en-GB',
+        background: '#fff',
+        theme_color: '#fff',
+        display: 'standalone',
+        orientation: 'any',
+        start_url: '/?homescreen=1',
+        version: '1.0',
+
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          opengraph: false,
+          twitter: false,
+          yandex: false,
+          windows: false
         }
       }
     }
