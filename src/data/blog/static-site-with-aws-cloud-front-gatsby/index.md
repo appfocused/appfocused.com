@@ -9,23 +9,11 @@ At Appfocused our aim is to build enterprise grade solutions with minimal financ
 
 In this post I'd like to share how Github / Travis and AWS suite of services help us to host our static website, setup domain and TLS certificates and automate deployments.
 
-## Tasks
-
-The baseline for the website ops looked as following:
-
-- Generate the website
-- Securely serve the website on https://www.appfocused.com
-- Redirect all `appfocused.com` requests to `www.appfocused.com`
-- Redirect all `http` requests to `https`
-- Automatically build and deploy the website when a change is introduced
-- Invalidate CDN cache on deployment
-
 ## Architecture
 
 * Website content is generated and uploaded to S3 bucket
 * CloudFront invalidates previous cache and caches the new contents of S3 bucket
 * User requests `www.appfocused.com`
-
 * AWS Route 53 A record matches this request and points to the linked CloudFront distribution
 * Cloudfront distribution enables secure connection and serves cached version of S3 bucket's content
 
