@@ -23,13 +23,13 @@ In this post I'd like to share how Github / Travis and AWS suite of services hel
 
 ## Tech choices
 
-- Static website generator: **Gatsby**
-- Hosting: **AWS S3**
-- Domain management: **AWS Route 53**
-- TLS certificate: **AWS Certificate Manager**
-- CDN: **AWS Cloudfront**
-- Code repository: **Github**
-- Continuous Deployment: **Travis**
+* Static website generator: **Gatsby**
+* Hosting: **AWS S3**
+* Domain management: **AWS Route 53**
+* TLS certificate: **AWS Certificate Manager**
+* CDN: **AWS Cloudfront**
+* Code repository: **Github**
+* Continuous Deployment: **Travis**
   
 
 ## Process
