@@ -91,17 +91,17 @@ There are two vital reasons to use Cloudfront in our solution:
   SSL/TLS certificate provides network level protection.
 
 - **Fast and Global**  
-  website is served with improved latency and has lower the load on the origin servers (S3 buckets in our case).
+  website is served with improved latency and has lower load on the origin servers (S3 buckets in our case).
 
 #### Setup steps and some caveats
 
-- I created <u>**two**</u> CloudFront Distributions. Each of this distributions point to corresponding bucket: one to `appfocused.com`, another one to `www.appfocused.com`
-- For _Origin Domain Name_ I <u>**did not use AWS autosuggest**</u> in the dropdown (counterintuitive, I know). Instead, you are expected to manually enter bucket urls provided in _Static Website Hosting_ section (Website endpoint). The urls should have form (or similar): `appfocused.com.s3-website-us-west-1.amazonaws.com`
-- On both distribution I set _HTTP to HTTPS_ redirect
-- I left _Default Root Object_ empty
-- I added our TLS certificate to _Custom SSL Certificate_ field
+- I created <u>**two**</u> CloudFront Distributions. Each of this distributions point to corresponding bucket: one to `appfocused.com`, another one to `www.appfocused.com`  
+- For _Origin Domain Name_ I <u>**did not use AWS autosuggest**</u> in the dropdown (counterintuitive, I know). Instead, you are expected to manually enter bucket urls provided in _Static Website Hosting_ section (Website endpoint). The urls should have form (or similar): `appfocused.com.s3-website-us-west-1.amazonaws.com`  
+- On both distribution I set _HTTP to HTTPS_ redirect  
+- I left _Default Root Object_ empty  
+- I added our TLS certificate to _Custom SSL Certificate_ field  
 
-Once the distributions were created I made a note of both distribution URLs (similar to `d1111111111111.cloudfront.net`), they will play key role in the next step.
+Once the distributions has been created I made a note of both distribution URLs (similar to `d1111111111111.cloudfront.net`), they would play key role in the next step.
 
 ### 6. Configure your domain to work with Cloudfront
 
@@ -124,21 +124,18 @@ Then I added environment variables to Travis CI:
 These variables are only accessible only to the build script, no one is able to access them.  
 Such separation and encapsulation of the source code and environment config helps us to freely share our code without a fear of being hacked.
 
-Once environment vars were configured in Travis, I added a config file inside my project's root on Github — [.travis.yml](https://github.com/appfocused/appfocused.com/blob/master/.travis.yml). It is a step-by-step instruction for Travis CI and it makes continuous integration and deployment possible by doing the following:
+Once environment vars has been configured in Travis, I added a config file inside my project's root on Github — [.travis.yml](https://github.com/appfocused/appfocused.com/blob/master/.travis.yml). It is a step-by-step instruction for Travis CI and it makes continuous integration and deployment possible by doing the following:
 
 * installs AWS command line
 * installs npm dependencies
 * runs unit tests
 * builds the project
+* authenticates with AWS
 * removes the contents of S3 bucket (previous release)
-* deploy the new build to S3
-* invalidate cache on CloudFront distributions for new content to appear on users screens
+* deploys the new build to S3
+* invalidates cache on CloudFront distributions for new content to appear on users screens
 
-
-
-All of the above allows me to go to Github's web UI from the browser, add a folder and a markdown file inside `src/data/blog`. Once I'm done editing my mardown file, I'm able to save it and commit it to `master` branch using the same web interface in the browser. The new blog post will be available in a matter of seconds.
-
-
+All of the above allows me to go to Github's web UI from the browser, add a folder and a markdown file inside `src/data/blog`. Once I'm done editing my mardown file, I'm able to save it and commit it to `master` branch using the same web interface in the browser. The new blog post will be available in a matter of seconds.  
 
 ## Cost
 
