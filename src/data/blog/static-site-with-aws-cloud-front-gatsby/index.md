@@ -17,7 +17,7 @@ In this post I'd like to share how Github / Travis and AWS suite of services hel
 * AWS Route 53 A record matches this request and points to the linked CloudFront distribution
 * Cloudfront distribution enables secure connection and serves cached version of S3 bucket's content
 
-<center>![Static website architecture](https://d2908q01vomqb2.cloudfront.net/0a57cb53ba59c46fc4b692527a38a87c78d84028/2017/06/27/arch-1-2.png)</center>
+![Static website architecture](https://d2908q01vomqb2.cloudfront.net/0a57cb53ba59c46fc4b692527a38a87c78d84028/2017/06/27/arch-1-2.png)
 
 <center><small>Static website architechture</small></center>
 
