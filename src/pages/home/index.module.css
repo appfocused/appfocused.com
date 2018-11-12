@@ -12,56 +12,10 @@
   }
 }
 
-.cta {
-  border: 2px solid #8e44ad;
-  color: #8e44ad;
-  font-family: 'Roboto';
-  background: transparent;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:hover {
-    border-color: #f39c12;
-    background: #f39c12;
-    color: #fff;
-  }
-}
-
 .column {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.form {
-  & label {
-    font-size: 1.2rem;
-  }
-
-  & input,
-  & textarea {
-    display: block;
-  }
-
-  & input,
-  & textarea {
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    background: rgb(238, 238, 238);
-    color: #444;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-}
-
-@media (--phablet-viewport) {
-  .form input,
-  .form textarea {
-    width: 50vw;
-  }
 }
 
 .icon {

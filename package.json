@@ -7,7 +7,9 @@
     "url": "https://github.com/appfocused/appfocused.com/issues"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "form-container": "^0.2.7",
     "gatsby-plugin-web-font-loader": "1.0.4",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.11",
@@ -16,11 +18,13 @@
     "react-burger-menu": "2.5.3",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
+    "react-toastify": "^4.4.2",
     "react-typography": "^0.16.13",
     "sanitize.css": "^7.0.3",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",
-    "typescript": "3.1.1"
+    "typescript": "3.1.1",
+    "validator": "^10.9.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^0.15.2",
@@ -30,6 +34,7 @@
     "@types/lodash": "^4.14.116",
     "@types/react-burger-menu": "^2.2.1",
     "@types/react-helmet": "^5.0.7",
+    "@types/validator": "^9.4.2",
     "autoprefixer": "^9.1.5",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
@@ -81,7 +86,7 @@
     "url": "https://github.com/appfocused/appfocused.com.git"
   },
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop --https",
     "dev": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 0",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
