@@ -10,12 +10,8 @@
     "no-var-requires": false,
     "quotemark": [true, "single", "jsx-double"],
     "trailing-comma": false,
-<<<<<<< HEAD
     "semicolon": ["ignore-bound-class-methods"],
     "arrow-parens": ["error", "as-needed"]
-=======
-    "semicolon": ["ignore-bound-class-methods"]
->>>>>>> blog and menu improvements
   },
   "rulesDirectory": []
 }
