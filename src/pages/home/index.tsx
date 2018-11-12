@@ -6,7 +6,11 @@ import Section from '../../components/section';
 import Grid from '../../components/grid';
 import ExpertsContent from './experts.mdx';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import * as styles from './index.module.css';
+import { ContactForm } from '../../components/contact-form';
 
 interface IProps {
   location: {
@@ -21,6 +25,11 @@ const handleClick = (e: any) => {
   });
 };
 
+const handleSubmit = (e: React.SyntheticEvent) => {
+  e.preventDefault();
+  console.log(e);
+};
+
 export default (props: IProps) => {
   // const data = props.data.markdownRemark;
   return (
@@ -30,6 +39,7 @@ export default (props: IProps) => {
           <title>Appfocused: great user experiences. Implemented</title>
           <meta name="description" content="Appfocused" />
         </Helmet>
+        <ToastContainer />
         <Hero />
         <Section>
           <Grid>
@@ -86,35 +96,7 @@ export default (props: IProps) => {
           <Grid columns={1}>
             <div>
               <h2 name="contacts">Have a project in mind?</h2>
-              <form
-                className={styles.form}
-                action="https://formspree.io/info@appfocused.com"
-                method="POST"
-              >
-                <div>
-                  <label>
-                    Name:
-                    <input type="text" name="name" required />
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    Email:
-                    <input type="email" name="_replyto" required />
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    About your project:
-                    <textarea name="about" rows={4} />
-                  </label>
-                </div>
-                <div>
-                  <button type="submit" className={styles.cta}>
-                    Send
-                  </button>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </Grid>
         </Section>

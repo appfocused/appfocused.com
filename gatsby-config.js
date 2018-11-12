@@ -3,7 +3,11 @@ module.exports = {
     title: 'Appfocused',
     author: 'Vitaly Kondratiev',
     description: 'Great user experiences. Implemented.',
-    siteUrl: 'https://appfocused.com'
+    siteUrl: 'https://www.appfocused.com'
+  },
+  proxy: {
+    prefix: '/api',
+    url: 'https://api.appfocused.com'
   },
   pathPrefix: '/',
   plugins: [

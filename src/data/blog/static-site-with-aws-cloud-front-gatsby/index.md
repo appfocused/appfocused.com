@@ -11,11 +11,11 @@ In this post I'd like to share how Github / Travis and AWS suite of services hel
 
 ## Architecture
 
-* Website content is generated and uploaded to S3 bucket
-* CloudFront invalidates previous cache and caches the new contents of S3 bucket
-* User requests `www.appfocused.com`
-* AWS Route 53 A record matches this request and points to the linked CloudFront distribution
-* Cloudfront distribution enables secure connection and serves cached version of S3 bucket's content
+- Website content is generated and uploaded to S3 bucket
+- CloudFront invalidates previous cache and caches the new contents of S3 bucket
+- User requests `www.appfocused.com`
+- AWS Route 53 A record matches this request and points to the linked CloudFront distribution
+- Cloudfront distribution enables secure connection and serves cached version of S3 bucket's content
 
 ![Static website architecture](https://d2908q01vomqb2.cloudfront.net/0a57cb53ba59c46fc4b692527a38a87c78d84028/2017/06/27/arch-1-2.png)
 
@@ -23,14 +23,13 @@ In this post I'd like to share how Github / Travis and AWS suite of services hel
 
 ## Tech choices
 
-* Static website generator: **Gatsby**
-* Hosting: **AWS S3**
-* Domain management: **AWS Route 53**
-* TLS certificate: **AWS Certificate Manager**
-* CDN: **AWS Cloudfront**
-* Code repository: **Github**
-* Continuous Deployment: **Travis**
-  
+- Static website generator: **Gatsby**
+- Hosting: **AWS S3**
+- Domain management: **AWS Route 53**
+- TLS certificate: **AWS Certificate Manager**
+- CDN: **AWS Cloudfront**
+- Code repository: **Github**
+- Continuous Deployment: **Travis**
 
 ## Process
 
@@ -43,13 +42,11 @@ The baseline for the website ops looked as following:
 - Automatically build and deploy the website when a change is introduced
 - Invalidate CDN cache on deployment
 
-Let's go through it step by step and talk about tech decisions and setup.  
-
-
+Let's go through it step by step and talk about tech decisions and setup.
 
 ### 1. Generate the site
 
-First things first, I had to generate the website. Out site uses [Gatsby v2](https://www.gatsbyjs.org/) — modern site generator for React. Since React paradigm has been introduced in 2013 it's hard to think of a better way for web apps and web pages to compose components and encapsulate styles with [CSS Modules](https://github.com/css-modules/css-modules). Once it's set up, you need to run `gatsby build` and it will perform an optimized production build for your site generating static HTML and per-route JavaScript code bundles.  
+First things first, I had to generate the website. Out site uses [Gatsby v2](https://www.gatsbyjs.org/) — modern site generator for React. Since React paradigm has been introduced in 2013 it's hard to think of a better way for web apps and web pages to compose components and encapsulate styles with [CSS Modules](https://github.com/css-modules/css-modules). Once it's set up, you need to run `gatsby build` and it will perform an optimized production build for your site generating static HTML and per-route JavaScript code bundles.
 
 Check out [our website's source code](https://github.com/appfocused/appfocused.com) on github for inspiration.
 
@@ -95,11 +92,11 @@ There are two vital reasons to use Cloudfront in our solution:
 
 #### Setup steps and some caveats
 
-- I created <u>**two**</u> CloudFront Distributions. Each of this distributions point to corresponding bucket: one to `appfocused.com`, another one to `www.appfocused.com`  
-- For _Origin Domain Name_ I <u>**did not use AWS autosuggest**</u> in the dropdown (counterintuitive, I know). Instead, you are expected to manually enter bucket urls provided in _Static Website Hosting_ section (Website endpoint). The urls should have form (or similar): `appfocused.com.s3-website-us-west-1.amazonaws.com`  
-- On both distribution I set _HTTP to HTTPS_ redirect  
-- I left _Default Root Object_ empty  
-- I added our TLS certificate to _Custom SSL Certificate_ field  
+- I created <u>**two**</u> CloudFront Distributions. Each of this distributions point to corresponding bucket: one to `appfocused.com`, another one to `www.appfocused.com`
+- For _Origin Domain Name_ I <u>**did not use AWS autosuggest**</u> in the dropdown (counterintuitive, I know). Instead, you are expected to manually enter bucket urls provided in _Static Website Hosting_ section (Website endpoint). The urls should have form (or similar): `appfocused.com.s3-website-us-west-1.amazonaws.com`
+- On both distribution I set _HTTP to HTTPS_ redirect
+- I left _Default Root Object_ empty
+- I added our TLS certificate to _Custom SSL Certificate_ field
 
 Once the distributions has been created I made a note of both distribution URLs (similar to `d1111111111111.cloudfront.net`), they would play key role in the next step.
 
@@ -110,32 +107,32 @@ Now our website is served only via `https` protocol: `http` traffic as well as `
 
 ### 7. Setup continuous delivery with Github and Travis CI
 
-The website code is hosted on github as open source, [we've got nothing to hide](https://github.com/appfocused/appfocused.com). 
+The website code is hosted on github as open source, [we've got nothing to hide](https://github.com/appfocused/appfocused.com).
 
 Every commit to `master` branch triggers a build and deployment to AWS S3. The honours are done by [Travis CI](travis-ci.com). In order for it to work, I had to authorise it to access appfocused repository.
 
 Then I added environment variables to Travis CI:
 
-* `$AWS_ACCESS_KEY_ID` 
-* `$AWS_SECRET_ACCESS_KEY` 
-* `$S3_APPFOCUSED_BUCKET`
-* `$CLOUDFRONT_DISTRIBUTION_ID`
+- `$AWS_ACCESS_KEY_ID`
+- `$AWS_SECRET_ACCESS_KEY`
+- `$S3_APPFOCUSED_BUCKET`
+- `$CLOUDFRONT_DISTRIBUTION_ID`
 
 These variables are only accessible only to the build script, no one is able to access them.  
 Such separation and encapsulation of the source code and environment config helps us to freely share our code without a fear of being hacked.
 
 Once environment vars has been configured in Travis, I added a config file inside my project's root on Github — [.travis.yml](https://github.com/appfocused/appfocused.com/blob/master/.travis.yml). It is a step-by-step instruction for Travis CI and it makes continuous integration and deployment possible by doing the following:
 
-* installs AWS command line
-* installs npm dependencies
-* runs unit tests
-* builds the project
-* authenticates with AWS
-* removes the contents of S3 bucket (previous release)
-* deploys the new build to S3
-* invalidates cache on CloudFront distributions for new content to appear on users screens
+- installs AWS command line
+- installs npm dependencies
+- runs unit tests
+- builds the project
+- authenticates with AWS
+- removes the contents of S3 bucket (previous release)
+- deploys the new build to S3
+- invalidates cache on CloudFront distributions for new content to appear on users screens
 
-All of the above allows me to go to Github's web UI from the browser, add a folder and a markdown file inside `src/data/blog`. Once I'm done editing my mardown file, I'm able to save it and commit it to `master` branch using the same web interface in the browser. The new blog post will be available in a matter of seconds.  
+All of the above allows me to go to Github's web UI from the browser, add a folder and a markdown file inside `src/data/blog`. Once I'm done editing my mardown file, I'm able to save it and commit it to `master` branch using the same web interface in the browser. The new blog post will be available in a matter of seconds.
 
 ## Cost
 
