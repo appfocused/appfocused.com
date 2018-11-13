@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const sendForm = async (model: any) => {
   return axios.post(
-    '/api/email/send',
+    'https://api.appfocused.com/api/email/send',
     { ...model },
     {
       headers: {
