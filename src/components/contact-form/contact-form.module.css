@@ -1,20 +1,5 @@
 @import '../../styles/_mq.css';
-
-.cta {
-  border: 2px solid #8e44ad;
-  color: #8e44ad;
-  font-family: 'Roboto';
-  background: transparent;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:hover {
-    border-color: #f39c12;
-    background: #f39c12;
-    color: #fff;
-  }
-}
+@import '../../styles/_form.css';
 
 .form {
   & label {
