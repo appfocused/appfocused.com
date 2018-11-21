@@ -1,2 +1,2 @@
 # Appfocused.com
-Source code for [www.appfocused.com](https://www.appfocused.com)
+_built with ❤️ at [Appfocused](https://www.appfocused.com)_
