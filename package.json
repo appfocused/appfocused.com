@@ -45,7 +45,7 @@
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-manifest": "next",
-    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-postcss": "2.0.0-rc.2",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "^2.0.0-rc.7",
