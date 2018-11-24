@@ -89,7 +89,7 @@ export const pageQuery = graphql`
     }
     defaultFeaturedImage: file(relativePath: { eq: "polygons.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 700) {
+        sizes(maxWidth: 1200) {
           ...GatsbyImageSharpSizes
         }
       }
@@ -103,7 +103,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 630) {
+            sizes(maxWidth: 1200) {
               ...GatsbyImageSharpSizes
             }
           }
