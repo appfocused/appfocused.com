@@ -71,7 +71,7 @@ module.exports = {
         icon: `./static/apple-icon-152x152.png`
       }
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
@@ -113,6 +113,7 @@ module.exports = {
           windows: false
         }
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
   ]
 };
