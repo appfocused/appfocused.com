@@ -55,7 +55,6 @@ It is one of the fundamental principles of Continuous Delivery. Binary (in our c
 Practically that means that hardcoded absolute URLs like `https://api.appfocused.com/email/send` in our client code will stop us from having a single artifact, because on development environment I want my web client to hit, say, `https://api-dev.appfocused.com/email/send`.
 "Never hardcode an absolute API URL in your client code" - became a powerful mantra for me and helped me to overcome some challenges on the way.
 
-
 ## Solution
 
 Relative URL `/email/send` can solve it once and for all on the client, making "Build Once, Deploy Many" possible. It is proxy's work to orchestrate the request further. It also deals with the restrictions imposed by the browser. The proxy server, in this case, takes the onus of handling our requests, responses, and making the modifications necessary to facilitate cross-origin communication.
@@ -103,7 +102,6 @@ server {
 
 <center><small>/etc/nginx/conf.d/app.conf</small></center>
 <p></p>
-
 
 The `proxy_pass` directive is what makes this configuration a reverse proxy. It specifies that all requests which match the location block (in this case `/api` path) should be forwarded to `http://api.appfocused.com`, where our backend is running.
 
