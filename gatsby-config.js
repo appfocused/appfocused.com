@@ -116,7 +116,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      exclude: ['/home/*']
+      options: {
+        exclude: ['/home/*']
+      }
     }
   ]
 };
