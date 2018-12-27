@@ -51,10 +51,14 @@
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   & .bm-item a {
 =======
   & .bm-item {
 >>>>>>> blog and menu improvements
+=======
+  & .bm-item a {
+>>>>>>> visual update - footer, page transitions, npm update
     color: var(--menu-item-color);
     text-decoration: none;
 
@@ -63,6 +67,9 @@
       text-decoration: underline;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> visual update - footer, page transitions, npm update
 
     &[aria-current] {
       position: relative;
@@ -78,24 +85,15 @@
         color: rgba(255, 255, 255, 0.3);
       }
     }
+<<<<<<< HEAD
 =======
 >>>>>>> blog and menu improvements
+=======
+>>>>>>> visual update - footer, page transitions, npm update
   }
 
   /* Styling of overlay */
   & .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-.active-menu {
-  position: relative;
-  &:before {
-    position: absolute;
-    content: '>';
-    left: -25px;
-    text-decoration: none;
-    font-family: 'Roboto Mono';
-    color: rgba(255, 255, 255, 0.3);
   }
 }

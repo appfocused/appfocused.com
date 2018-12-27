@@ -18,7 +18,6 @@ interface Props {
 
 class Home extends React.Component<Props> {
   render() {
-    console.log(this.props);
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const siteDescription = get(
       this,
