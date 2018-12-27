@@ -4,7 +4,7 @@ import HeaderNavigation from '../header-navigation';
 import Menu from '../menu';
 import Footer from '../footer';
 
-import './layout.module.css';
+import * as styles from './layout.module.css';
 
 interface IProps extends React.HTMLProps<HTMLDivElement> {
   location?: {
@@ -13,16 +13,20 @@ interface IProps extends React.HTMLProps<HTMLDivElement> {
   children: any;
 }
 
-export default class DefaultLayout extends React.PureComponent<
-  IProps,
-  { scrolled: boolean }
-> {
+interface IState {
+  scrolled: boolean;
+  hasScroll: boolean;
+}
+
+export default class DefaultLayout extends React.PureComponent<IProps, IState> {
   state = {
+    hasScroll: true,
     scrolled: false
   };
 
   componentDidMount() {
     this.bindScroll();
+    this.checkScroll();
   }
 
   componentWillUnmount() {
@@ -35,6 +39,12 @@ export default class DefaultLayout extends React.PureComponent<
 
   unbindScroll() {
     window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  checkScroll() {
+    const hasScroll =
+      document.body.clientHeight > document.documentElement.clientHeight;
+    this.setState({ hasScroll });
   }
 
   handleScroll = () => {
@@ -69,12 +79,12 @@ export default class DefaultLayout extends React.PureComponent<
           ]}
         />
         <Menu />
-        <div id="page-wrap" className="container">
-          <header>
+        <div id="page-wrap" className={styles.container}>
+          <header className={styles.header}>
             <HeaderNavigation />
           </header>
-          <main>{this.props.children}</main>
-          <Footer />
+          <main className={styles.main}>{this.props.children}</main>
+          <Footer hasScroll={this.state.hasScroll} />
         </div>
       </div>
     );

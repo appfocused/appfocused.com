@@ -1,6 +1,6 @@
 @import '../../styles/base.css';
 
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,15 +22,17 @@ header {
 
   @supports (display: grid) {
     display: grid;
-    grid-gap: 20px;
     grid-template-areas:
       'main'
       'footer';
 
-    grid-template-rows: 1fr auto-fit;
+    grid-template-rows: auto 100px;
   }
 }
 
-main {
+.main {
   grid-area: main;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }

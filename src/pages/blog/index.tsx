@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { get } from 'lodash';
 import Helmet from 'react-helmet';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import Layout from '../../components/layout/layout';
 import Section from '../../components/section';
@@ -17,7 +18,6 @@ interface Props {
 
 class Home extends React.Component<Props> {
   render() {
-    console.log(this.props);
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const siteDescription = get(
       this,
@@ -47,9 +47,14 @@ class Home extends React.Component<Props> {
               <div key={node.fields.slug}>
                 <small>{node.frontmatter.date}</small>
                 <h3>
-                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                  <AniLink
+                    style={{ boxShadow: 'none' }}
+                    to={node.fields.slug}
+                    direction="up"
+                    cover
+                  >
                     {title}
-                  </Link>
+                  </AniLink>
                 </h3>
                 <p
                   dangerouslySetInnerHTML={{ __html: node.excerpt }}
