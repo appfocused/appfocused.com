@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import { get } from 'lodash';
 import Img from 'gatsby-image';
 import ReactDisqusComments from 'react-disqus-comments';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import Layout from '../components/layout/layout';
 import Section from '../components/section';
@@ -55,19 +56,32 @@ class BlogPostTemplate extends React.Component<any, any> {
               padding: 0
             }}
           >
-            {previous && (
-              <li>
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              </li>
-            )}
+            {!next &&
+              previous && (
+                <li>
+                  <span>Read previous: </span>
+                  <AniLink
+                    to={previous.fields.slug}
+                    rel="prev"
+                    direction="left"
+                    cover
+                  >
+                    {previous.frontmatter.title}
+                  </AniLink>
+                </li>
+              )}
 
             {next && (
               <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
+                <span>Read next: </span>
+                <AniLink
+                  to={next.fields.slug}
+                  rel="next"
+                  direction="right"
+                  cover
+                >
+                  {next.frontmatter.title}
+                </AniLink>
               </li>
             )}
           </ul>

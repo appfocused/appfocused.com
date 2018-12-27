@@ -50,7 +50,7 @@
     padding: 0.8em;
   }
 
-  & .bm-item {
+  & .bm-item a {
     color: var(--menu-item-color);
     text-decoration: none;
 
@@ -58,22 +58,25 @@
       color: var(--menu-item-hover);
       text-decoration: underline;
     }
+
+    &[aria-current] {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.6;
+
+      &:before {
+        position: absolute;
+        content: '›';
+        left: -25px;
+        text-decoration: none;
+        font-family: 'Roboto Mono';
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 
   /* Styling of overlay */
   & .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-.active-menu {
-  position: relative;
-  &:before {
-    position: absolute;
-    content: '>';
-    left: -25px;
-    text-decoration: none;
-    font-family: 'Roboto Mono';
-    color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -21,6 +21,7 @@ declare module '*.jpg';
 declare module 'typography-theme-wordpress-2016';
 declare module 'typography';
 declare module '@mdx-js/tag';
+declare module 'gatsby-plugin-transition-link/AniLink';
 
 declare module '*.mdx' {
   let MDXComponent: (props: any) => JSX.Element;

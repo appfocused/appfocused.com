@@ -119,6 +119,7 @@ module.exports = {
       options: {
         exclude: [, '/home', '/home/*']
       }
-    }
+    },
+    `gatsby-plugin-transition-link`
   ]
 };
