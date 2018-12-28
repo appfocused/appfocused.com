@@ -29,9 +29,9 @@
     "validator": "^10.10.0"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^0.15.7",
-    "@mdx-js/mdx": "^0.15.7",
-    "@mdx-js/tag": "^0.15.6",
+    "@mdx-js/loader": "^0.16.6",
+    "@mdx-js/mdx": "^0.16.6",
+    "@mdx-js/tag": "^0.16.6",
     "@types/classnames": "^2.2.6",
     "@types/lodash": "^4.14.119",
     "@types/react": "^16.7.18",
