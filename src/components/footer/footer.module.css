@@ -1,18 +1,13 @@
 .footer {
   grid-area: footer;
   background: url('../../assets/polygons.jpg') bottom center;
+  padding: 20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: -2;
 
   & p {
-    position: fixed;
-    z-index: -1;
-    bottom: 20px;
-
     text-align: center;
     color: white;
     line-height: 1.6;
