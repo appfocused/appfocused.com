@@ -8,7 +8,7 @@ cache:
 install:
   - sudo pip install awscli
 before_script:
-  - npm cache clean
+  - npm cache clean --force
   - npm install
   - npm test
 script:
