@@ -4,7 +4,7 @@ import HeaderNavigation from '../header-navigation';
 import Menu from '../menu';
 import Footer from '../footer';
 
-import * as styles from './layout.module.css';
+import './layout.module.css';
 
 interface IProps extends React.HTMLProps<HTMLDivElement> {
   location?: {
