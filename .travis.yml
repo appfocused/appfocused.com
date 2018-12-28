@@ -8,9 +8,9 @@ cache:
 install:
   - sudo pip install awscli
 before_script:
+  - npm cache clean
   - npm install
   - npm test
-  - npm install -g node-gyp
 script:
   - npm run build
 deploy:
