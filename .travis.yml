@@ -10,6 +10,7 @@ install:
 before_script:
   - npm install
   - npm test
+  - npm install -g node-gyp
 script:
   - npm run build
 deploy:
