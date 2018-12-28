@@ -31,7 +31,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-mdx',
           `gatsby-plugin-typescript`,
           `gatsby-plugin-postcss`,
           {
