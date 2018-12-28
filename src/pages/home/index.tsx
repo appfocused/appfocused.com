@@ -4,7 +4,6 @@ import Hero from '../../components/hero';
 import Layout from '../../components/layout/layout';
 import Section from '../../components/section';
 import Grid from '../../components/grid';
-import ExpertsContent from './experts.mdx';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,7 +45,26 @@ export default (props: IProps) => {
             <div>
               <h2>Front-end development experts</h2>
               <div className={styles.media}>
-                <ExpertsContent />
+                <p>
+                  We are a team of passionate UI Engineers ready to roll our
+                  sleeves and help your organisation to meet your front-end
+                  development goals.
+                </p>
+
+                <p>
+                  With a highly technical team of JavaScript experts, we are at
+                  the leading edge of the newest and rapidly evolving
+                  frameworks. Having lived and breathed modern web development
+                  for more than 10 years, we know how to tackle its trickiest
+                  aspects like responsive design, browser compatibility,
+                  performance and accessibility.
+                </p>
+
+                <p>
+                  We help our clients to rapidly create digital products that
+                  drive growth, empower and enable an organisation to
+                  continuously learn, challenge and evolve.
+                </p>
               </div>
               <button className={styles.cta} onClick={handleClick}>
                 Let's talk
