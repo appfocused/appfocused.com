@@ -1,15 +1,16 @@
 sudo: required
 language: node_js
 node_js:
-- '8'
+  - '8'
 cache:
   directories:
-  - node_modules
+    - node_modules
 install:
   - sudo pip install awscli
 before_script:
   - npm install
   - npm test
+  - npm install -g node-gyp
 script:
   - npm run build
 deploy:
@@ -20,12 +21,12 @@ deploy:
   skip_cleanup: true
   local-dir: public
   acl: public_read
-  cache_control: "max-age=21600"
-after_success: 
+  cache_control: 'max-age=21600'
+after_success:
 branches:
   only:
-  - master
-  - develop
+    - master
+    - develop
 before_deploy:
   - aws s3 rm s3://$S3_APPFOCUSED_BUCKET --recursive
 after_deploy:
