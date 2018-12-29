@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Footer = React.memo(({ hasScroll }: IProps) => (
-  <footer className={styles.footer} style={{ zIndex: hasScroll ? -1 : 1 }}>
+  <footer className={styles.footer}>
     <p>
       2018 &copy; Appfocused Limited. All rights reserved.<br />
       Appfocused Limited is a company registered in England and Wales with

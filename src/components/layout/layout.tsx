@@ -78,11 +78,11 @@ export default class DefaultLayout extends React.PureComponent<IProps, IState> {
             { name: 'viewport', content: 'initial-scale=1, viewport-fit=cover' }
           ]}
         />
+        <header>
+          <HeaderNavigation />
+        </header>
         <Menu />
         <div id="page-wrap">
-          <header>
-            <HeaderNavigation />
-          </header>
           <main>{this.props.children}</main>
           <Footer hasScroll={this.state.hasScroll} />
         </div>
