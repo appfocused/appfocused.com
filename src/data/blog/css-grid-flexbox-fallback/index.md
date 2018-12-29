@@ -2,7 +2,6 @@
 title: Simple CSS Grid with flexbox fallback
 date: "2018-10-12T21:11:11.111Z"
 featuredImage: "./grid.jpg"
->>>>>>> working blogging and google analytics
 tags: ["ui dev", "layout", "css grid"]
 ---
 

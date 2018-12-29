@@ -50,15 +50,7 @@
     padding: 0.8em;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   & .bm-item a {
-=======
-  & .bm-item {
->>>>>>> blog and menu improvements
-=======
-  & .bm-item a {
->>>>>>> visual update - footer, page transitions, npm update
     color: var(--menu-item-color);
     text-decoration: none;
 
@@ -66,10 +58,6 @@
       color: var(--menu-item-hover);
       text-decoration: underline;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> visual update - footer, page transitions, npm update
 
     &[aria-current] {
       position: relative;
@@ -85,11 +73,6 @@
         color: rgba(255, 255, 255, 0.3);
       }
     }
-<<<<<<< HEAD
-=======
->>>>>>> blog and menu improvements
-=======
->>>>>>> visual update - footer, page transitions, npm update
   }
 
   /* Styling of overlay */

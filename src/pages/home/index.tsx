@@ -8,9 +8,6 @@ import Grid from '../../components/grid';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import * as styles from './index.module.css';
 import { ContactForm } from '../../components/contact-form';
 
