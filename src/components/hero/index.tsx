@@ -49,5 +49,4 @@ const Hero = () => (
     </ul>
   </section>
 );
-
 export default Hero;

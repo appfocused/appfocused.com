@@ -32,6 +32,12 @@ header {
 
 main {
   grid-area: main;
-  position: relative;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* fix for the burger menu */
+:global {
+  .tl-wrapper {
+    position: relative !important;
+  }
 }
