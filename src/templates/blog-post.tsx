@@ -37,7 +37,6 @@ class BlogPostTemplate extends React.Component<any, any> {
           </div>
         </div>
         <Section isBlog>
-          <p>{post.frontmatter.date}</p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <ReactDisqusComments
