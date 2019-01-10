@@ -10,6 +10,7 @@
 
 .blog {
   max-width: calc(var(--max-blog-content-width) * 1rem);
+  hyphens: manual;
 }
 
 .full-width {
