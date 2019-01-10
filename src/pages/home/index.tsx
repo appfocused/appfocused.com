@@ -41,7 +41,7 @@ export default (props: IProps) => {
         <ToastContainer />
         <Hero />
         <Section>
-          <Grid>
+          <Grid columns={2}>
             <div>
               <h2>Front-end development experts</h2>
               <div className={styles.media}>
@@ -70,6 +70,7 @@ export default (props: IProps) => {
                 Let's talk
               </button>
             </div>
+            <div>&nbsp;</div>
           </Grid>
         </Section>
         <Section style={{ backgroundColor: '#eee' }}>
