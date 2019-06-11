@@ -1,10 +1,8 @@
 ---
-title: Ultimate Autocomplete with TypeScript, React and RxJS
+title: Ultimate Autocomplete with TypeScript, React Hooks and RxJS
 date: '2019-06-10T18:54:32.111Z'
 tags: ['ui dev', 'typescript', 'react', 'rxjs', 'autocomplete']
 ---
-
-# Ultimate Autocomplete with TypeScript, React Hooks and RxJS
 
 This user interface pattern is known by many names - Autocomplete / Autosuggest / Typeahead, but effectively is doing the same thing.
 
@@ -22,15 +20,19 @@ First thing first, let's plan what parts are required for our component to work 
 
 - Manages mouse and keyboard input
 - Invokes a service every time user input changes
+- Renders user input
 - Renders a list of suggestions
+- Invokes a callback when suggestion is selected
+- Handles errors
 
-### Service
+### Suggestion Service
 
-- fetch relevant suggestions from a server when user entered more than 2 characters
-- return responses in correct order and always show suggestions from the most recent response
-- wait for user to stop typing (500ms pause) to fire an API call
-- transform response to be consumed by our component
+- fetches relevant suggestions from a server when user entered more than 2 characters
+- returns responses in correct order and always show suggestions from the most recent query
+- waits for user to stop typing (500ms pause) to fire an API call
+- transforms the shape of response to be consumed by our component
 
+  
 ## Implementation
 
 ### Create starter app
@@ -39,34 +41,36 @@ First thing first, let's plan what parts are required for our component to work 
 
 ### Install dependencies
 
-RxJS will be instrumental in our serviceI decided to use Material UI to feature in my Autocomplete component for simplicity. You are welcome to use other libraries or native HTML elements like `<input>` and `<div>`.  
-`npm i rxjs @material-ui/core --save`
+RxJS will be instrumental in our service. I decided to use Material UI in my Autocomplete component for simplicity. You are welcome to use other libraries or native HTML elements like `<input>` and `<div>`.  
+  
+```bash
+npm i rxjs @material-ui/core --save
+```
 
 ### Autocomplete component
 
-**discuss rxjs / react integration anf why it's useful**
+*** TBA rxjs / react integration rationale ***
 
-`BehaviorSubject` is a special type of RxJS Observable and it allows us to convert values from React's `onChange` event handler into a RxJS stream of values.  
- Having a stream will be beneficial for our service to manipulate this data.
-
+`BehaviorSubject` is a special type of RxJS Observable and it allows us to convert values from React's `onChange` event handler into a RxJS stream of values. Having a stream will be beneficial for our service to manipulate this data further.  
+  
 For now we just initialise it once outside out component's code:
 
-```ts
+```tsx
 const subject$ = new BehaviorSubject('');
 ```
-
+  
 Next, we are going to send our new values to the `$subject` observable in the event handler like so:
 
-```ts
+```tsx
 const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   subject$.next(e.target.value);
 };
 ```
-
+  
 Then inside our `Autocomplete` component we add a subscription to all the future updates to `subject$`. Think of it as a callback to every change in the input field.
 New hook `useEffect` is suited perfectly for this purpose. Second argument `[]` makes sure that subscription is done only once in component's lifecycle (after first render) and it can handle unsubscribe on unmount to avoid memory leaks.
 
-```ts
+```tsx
 React.useEffect(() => {
   const subscription = subject$.subscribe(value => {
     // store new value in the state
@@ -75,9 +79,9 @@ React.useEffect(() => {
   return () => subscription.unsubscribe();
 }, []);
 ```
-
+  
 Here's the Autocomplete skeleton:
-
+  
 ```tsx
 import * as React from 'react';
 import { BehaviorSubject } from 'rxjs';
@@ -129,8 +133,8 @@ export const Autocomplete: React.FunctionComponent = () => {
   );
 };
 ```
-
-### Service
+  
+### Suggestion Service
 
 So far so good, you can search for something but suggestions are not coming up. We need to implement a service to fetch them.  
 Let's start with a function `getSuggestions` which takes as an argument our previously created `subject$`. It contains a stream of all the values that were emitted by the event handler.
@@ -168,7 +172,7 @@ export const getSuggestions = (subject: BehaviorSubject<string>) => {
   );
 };
 ```
-
+  
 Example response when typed "APPL":
 
 ```json
@@ -198,9 +202,9 @@ Example response when typed "APPL":
     }
 }
 ```
-
+  
 In order to get a working solution, we need to wire our service to Autocomplete. The service should be called on every change to the input and return an array of relevant suggestions. On success, suggestions are populated to `Autocomplete` state and trigger a re-render.
-
+  
 I also added generic `S` to `Autocomplete` which can infer the shape of suggestion or implicitly provided to the component.
 
 ```tsx
@@ -279,7 +283,7 @@ export function Autocomplete<S>(props: Props<S>) {
   );
 }
 ```
-
+  
 ```ts
 // suggestion-service.ts
 
@@ -329,7 +333,7 @@ export const getSuggestions = <S>(
   );
 };
 ```
-
+  
 ```tsx
 // App.tsx
 
@@ -360,17 +364,17 @@ function App() {
 const rootElement = document.getElementById('root');
 render(<App />, rootElement);
 ```
-
+  
 ## Keyboard navigation
 
 Finally we need to add keyboard navigation so that our Autocomplete can be fully operational without the use of mouse.
 
 We will need to add some additional state to our `Autocomplete` that will manage selected suggestion index:
 
-```
+```tsx
 const [highlightedIdx, setHighlightedIdx] = React.useState(0);
 ```
-
+  
 Next we will need a keyDown handler for our input control. It will contain a simple logic how to increment, decrement and loop through highlighted index and it will call `handleSelect` behaviour on `Enter` key (same as we use for mouse click).
 
 ```tsx
@@ -412,7 +416,7 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
   }
 };
 ```
-
+  
 Lastly, we need to wire it into our input and highlight the suggestion:
 
 ```tsx
