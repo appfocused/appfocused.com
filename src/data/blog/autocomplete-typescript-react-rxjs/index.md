@@ -32,7 +32,7 @@ First thing first, let's plan what parts are required for our component to work 
 - returns responses in correct order and always show suggestions from the most recent query
 - waits for user to stop typing (500ms pause) to fire an API call
 - transforms the shape of response to be consumed by our component
-
+  
   
 ## Implementation
 
@@ -47,6 +47,7 @@ RxJS will be instrumental in our service. I decided to use Material UI in my Aut
 ```bash
 npm i rxjs @material-ui/core --save
 ```
+  
 
 ### Autocomplete component
 
@@ -60,6 +61,7 @@ For now we just initialise it once outside out component's code:
 const subject$ = new BehaviorSubject('');
 ```
   
+  
 Next, we are going to send our new values to the `$subject` observable in the event handler like so:
 
 ```tsx
@@ -67,6 +69,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   subject$.next(e.target.value);
 };
 ```
+  
   
 Then inside our `Autocomplete` component we add a subscription to all the future updates to `subject$`. Think of it as a callback to every change in the input field.
 New hook `useEffect` is suited perfectly for this purpose. Second argument `[]` makes sure that subscription is done only once in component's lifecycle (after first render) and it can handle unsubscribe on unmount to avoid memory leaks.
@@ -80,6 +83,7 @@ React.useEffect(() => {
   return () => subscription.unsubscribe();
 }, []);
 ```
+  
   
 Here's the Autocomplete skeleton:
   
@@ -134,6 +138,7 @@ export const Autocomplete: React.FunctionComponent = () => {
   );
 };
 ```
+  
   
 ### Suggestion Service
 
