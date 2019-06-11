@@ -2,6 +2,7 @@
 title: Ultimate Autocomplete with TypeScript, React Hooks and RxJS
 date: '2019-06-10T18:54:32.111Z'
 tags: ['ui dev', 'typescript', 'react', 'rxjs', 'autocomplete']
+featuredImage: './bruno-martins-442162-unsplash.jpg'
 ---
 
 This user interface pattern is known by many names - Autocomplete / Autosuggest / Typeahead, but effectively is doing the same thing.
