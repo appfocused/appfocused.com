@@ -11,7 +11,9 @@ As [UI patterns](http://ui-patterns.com/patterns/Autocomplete) scientifically pu
 
 In this blog post I'll show you how to implement this component from scratch with React, RxJS and, optionally, Material UI. TypeScript has become a default language for me over the last couple of years, so excuse me in advance for picking TS over JS for this tutorial.
 
-While buiding it I'd like to focus on correct implementation and discuss what each of these dependencies bring to the table and what is the advantage of using this mix of libraries as opposed to using them on their own (which is absolutely possible) to complete the same task.
+While buiding it I'd like to focus on correct implementation and discuss what each of these dependencies bring to the table and what is the advantage of using this mix of libraries as opposed to using them on their own (which is absolutely possible) to complete the same task.  
+  
+TLDR: [complete example on codesandbox](https://codesandbox.io/s/react-rxjs-event-handler-ujyk2)
 
 ## Solution design
 
