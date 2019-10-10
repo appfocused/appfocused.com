@@ -1,7 +1,7 @@
 sudo: required
 language: node_js
 node_js:
-  - '8'
+  - "12"
 cache:
   directories:
     - node_modules
@@ -20,7 +20,7 @@ deploy:
   skip_cleanup: true
   local-dir: public
   acl: public_read
-  cache_control: 'max-age=21600'
+  cache_control: "max-age=21600"
 after_success:
 branches:
   only:
