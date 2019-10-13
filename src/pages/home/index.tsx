@@ -46,26 +46,38 @@ export default (props: IProps) => {
               <h2>Front-end development experts</h2>
               <div className={styles.media}>
                 <p>
-                  We are a team of passionate UI Engineers ready to roll our
-                  sleeves and help your organisation to meet your front-end
-                  development goals.
+                  There are three vital elements of a flawless web application:
+                  <ul>
+                    <li>modern user interface (UI) design,</li>
+                    <li>effortless user experience (UX), and</li>
+                    <li>last but not least, immaculate execution of UI/UX</li>
+                  </ul>
                 </p>
-
+                <p>
+                  We are a team of software engineers specialising on execution
+                  of complex business-critical user interfaces on the web,
+                  desktop and mobile platforms. Accomplished UI execution not
+                  only brings the application to life, but also makes it secure
+                  and performant, available on different media and screen sizes,
+                  accessible for disabled users and many more. These are the
+                  features that your end-users care deeply about and our mission
+                  is to help your business to get it right.
+                </p>
                 <p>
                   With a highly technical team of JavaScript experts, we are at
                   the leading edge of the newest and rapidly evolving
-                  frameworks. Having lived and breathed modern web development
+                  technologies. Having lived and breathed modern web development
                   for more than 10 years, we know how to tackle its trickiest
-                  aspects like responsive design, browser compatibility,
-                  performance and accessibility.
+                  aspects like security, performance, compatibility, responsive
+                  design and accessibility.
                 </p>
-
                 <p>
                   We help our clients to rapidly create digital products that
                   drive growth, empower and enable an organisation to
                   continuously learn, challenge and evolve.
                 </p>
               </div>
+
               <button className={styles.cta} onClick={handleClick}>
                 Let's talk
               </button>
