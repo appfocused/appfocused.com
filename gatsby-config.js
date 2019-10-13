@@ -80,39 +80,42 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: './static/apple-icon-152x152.png',
+    // gatsby-plugin-favicon sharp dependency is out of date
+    // the plugin cannot be used until it is updated
+    //
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: './static/apple-icon-152x152.png',
 
-        // WebApp Manifest Configuration
-        appName: null, // Inferred with your package.json
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
-        dir: 'auto',
-        lang: 'en-GB',
-        background: '#fff',
-        theme_color: '#fff',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
+    //     // WebApp Manifest Configuration
+    //     appName: null, // Inferred with your package.json
+    //     appDescription: null,
+    //     developerName: null,
+    //     developerURL: null,
+    //     dir: 'auto',
+    //     lang: 'en-GB',
+    //     background: '#fff',
+    //     theme_color: '#fff',
+    //     display: 'standalone',
+    //     orientation: 'any',
+    //     start_url: '/?homescreen=1',
+    //     version: '1.0',
 
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          opengraph: false,
-          twitter: false,
-          yandex: false,
-          windows: false
-        }
-      }
-    },
+    //     icons: {
+    //       android: true,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       coast: false,
+    //       favicons: true,
+    //       firefox: true,
+    //       opengraph: false,
+    //       twitter: false,
+    //       yandex: false,
+    //       windows: false
+    //     }
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
