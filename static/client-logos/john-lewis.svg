@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="177px" height="42px" viewBox="0 0 177 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
-    <title>John_Lewis</title>
-    <desc>Created with Sketch.</desc>
-    <g id="John_Lewis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <polygon id="Fill-1" points="-7.74 117.433 185.016 117.433 185.016 -75.323 -7.74 -75.323"></polygon>
         <path d="M0.764,37.556 L2.156,37.556 C6.465,37.556 6.857,35.421 6.857,30.852 L6.857,0.464 L11.252,4.833 L11.252,32.071 C11.252,36.902 9.599,40.732 5.117,41.646 L0.764,37.556" id="Fill-2" fill="#1A1919"></path>
         <path d="M25.022,15.578 C28.763,15.578 31.462,18.233 31.462,21.889 C31.462,25.98 28.981,28.504 25.022,28.504 C21.409,28.504 18.929,25.849 18.929,21.845 C18.929,18.233 21.496,15.578 25.022,15.578 Z M25.064,32.202 C31.331,32.202 35.64,28.025 35.64,21.845 C35.64,16.057 31.2,11.88 25.064,11.88 C19.234,11.88 14.75,16.231 14.75,21.845 C14.75,27.851 19.059,32.202 25.064,32.202 Z" id="Fill-3" fill="#1A1919"></path>
