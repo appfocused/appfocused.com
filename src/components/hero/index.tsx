@@ -36,17 +36,6 @@ const technologies: ITechnology[] = [
 const Hero = () => (
   <section className={styles.hero}>
     <div className={styles.header}>Great user experiences. Implemented.</div>
-    <div className={styles.subheader}>
-      we&nbsp;know the ropes of&nbsp;front&#8209;end&nbsp;development
-    </div>
-    <ul className={styles.tech}>
-      {technologies.map(({ src, alt }, index) => (
-        <li key={`tech-${index}`}>
-          <img src={src} alt={alt} />
-          <span>{alt}</span>
-        </li>
-      ))}
-    </ul>
   </section>
 );
 export default Hero;

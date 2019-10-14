@@ -4,6 +4,7 @@ import Hero from '../../components/hero';
 import Layout from '../../components/layout/layout';
 import Section from '../../components/section';
 import Grid from '../../components/grid';
+import { Typography } from '@appfocused/ui-components/dist/es';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,84 +42,73 @@ export default (props: IProps) => {
         <ToastContainer />
         <Hero />
         <Section>
-          <Grid columns={2}>
+          <Grid columns={1}>
             <div>
-              <h2>Front-end development experts</h2>
-              <div className={styles.media}>
-                <p>
-                  There are three vital elements of a flawless web application:
-                  <ul>
-                    <li>modern user interface (UI) design,</li>
-                    <li>effortless user experience (UX), and</li>
-                    <li>last but not least, immaculate execution of UI/UX</li>
-                  </ul>
-                </p>
-                <p>
-                  We are a team of software engineers specialising on execution
-                  of complex business-critical user interfaces on the web,
-                  desktop and mobile platforms. Accomplished UI execution not
-                  only brings the application to life, but also makes it secure
-                  and performant, available on different media and screen sizes,
-                  accessible for disabled users and many more. These are the
-                  features that your end-users care deeply about and our mission
-                  is to help your business to get it right.
-                </p>
-                <p>
-                  With a highly technical team of JavaScript experts, we are at
-                  the leading edge of the newest and rapidly evolving
-                  technologies. Having lived and breathed modern web development
-                  for more than 10 years, we know how to tackle its trickiest
-                  aspects like security, performance, compatibility, responsive
-                  design and accessibility.
-                </p>
-                <p>
-                  We help our clients to rapidly create digital products that
-                  drive growth, empower and enable an organisation to
-                  continuously learn, challenge and evolve.
-                </p>
-              </div>
-
-              <button className={styles.cta} onClick={handleClick}>
-                Let's talk
-              </button>
+              <h2 className="centered">User Interface Experts</h2>
+              <p className="centered-text-block">
+                We are a team of software engineers specialised in building
+                complex business-critical user&nbsp;interfaces on the web,
+                desktop and mobile&nbsp;platforms.
+              </p>
             </div>
-            <div>&nbsp;</div>
           </Grid>
         </Section>
         <Section style={{ backgroundColor: '#eee' }}>
-          <h2>How can we help?</h2>
+          <h2 className="centered">How can we help?</h2>
           <Grid columns={3}>
             <div className={styles.column}>
               <span className={`${styles.icon} ${styles.iconDesign}`} />
-              <h3>UI Architecture</h3>
+              <h3>Web apps development</h3>
               <p>
-                There are plenty of&nbsp;considerations you need to&nbsp;make
-                when building an&nbsp;architecture for a&nbsp;web application.
-                We&nbsp;will help you navigate in&nbsp;the fast paced world
-                of&nbsp;front-end technology and design a&nbsp;fit for purpose
-                client-side stack and development workflow.
+                Web applications development is our core area of expertise and
+                passion. Not only we know how to build a slick and functional
+                front-end, but we also have a good insight on how to integrate
+                it into your existing services and corporate platforms.
               </p>
             </div>
             <div className={styles.column}>
               <span className={`${styles.icon} ${styles.iconCode}`} />
-              <h3>Front-end development</h3>
+              <h3>Desktop apps development</h3>
               <p>
-                Not only we&nbsp;know how to&nbsp;build stunning
-                standalone&nbsp;UI experiences, but we&nbsp;also have
-                a&nbsp;good insight how to&nbsp;integrate front-end workflow
-                into platforms like Adobe Experience Manager, Hybris,
-                SalesForce, Power&nbsp;BI and&nbsp;Tableau.
+                Modern frameworks such as Electron and Openfin allow us to reuse
+                our web expertise to rapidly produce complex and secure desktop
+                applications for Windows, Mac and Linux. Source code can be
+                shared between web and desktop, allowing to reduce time to
+                market for multi-platform apps.
               </p>
             </div>
             <div className={styles.column}>
               <span className={`${styles.icon} ${styles.iconQuality}`} />
-              <h3>Code Reviews and Audit</h3>
+              <h3>Mobile apps development</h3>
+            </div>
+            <div className={styles.column}>
+              <span className={`${styles.icon} ${styles.iconDesign}`} />
+              <h3>Code reviews and audit</h3>
               <p>
-                We&nbsp;will perform a&nbsp;thorough analysis of&nbsp;your web
-                application that is assessing Performance, Code Quality &amp;
-                Semantics, Accessibility, UI and Usability issues. A report will
-                document all recommendations and provide an&nbsp;immediately
-                actionable&nbsp;plan.
+                Understanding risks and technical debts now can pay off
+                considerably in the future. A thorough analysis of your web
+                application will surface risks, outline improvement
+                recommendations and provide you with immediately actionable
+                plan.
+              </p>
+            </div>
+            <div className={styles.column}>
+              <span className={`${styles.icon} ${styles.iconCode}`} />
+              <h3>Rescue mission</h3>
+              <p>
+                If you need help with finding out why your app is so slow or
+                constantly crashing &mdash; we’ll do a technical audit and fix
+                your application within a short timeframe.
+              </p>
+            </div>
+            <div className={styles.column}>
+              <span className={`${styles.icon} ${styles.iconQuality}`} />
+              <h3>Hiring help</h3>
+              <p>
+                We will perform a thorough analysis of your web application that
+                is assessing Performance, Code Quality & Semantics,
+                Accessibility, UI and Usability issues. A report will document
+                all recommendations and provide an immediately actionable plan.
               </p>
             </div>
           </Grid>

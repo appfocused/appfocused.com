@@ -31,6 +31,7 @@
   color: #fff;
   line-height: 1.1;
   margin-top: calc(var(--base-line-height) * 1rem);
+  margin-bottom: calc(var(--base-line-height) * 2rem);
   hyphens: manual;
 }
 
