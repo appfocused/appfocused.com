@@ -43,7 +43,7 @@ export default (props: IProps) => {
         <Section>
           <Grid columns={2}>
             <div>
-              <h2>Front-end development experts.</h2>
+              <h2>Front-end development experts</h2>
               <div className={styles.media}>
                 <p>
                   We are a team of passionate UI Engineers ready to roll our
