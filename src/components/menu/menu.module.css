@@ -41,7 +41,7 @@
 
   /* Morph shape necessary with bubble or elastic */
   & .bm-morph-shape svg {
-    fill: var(--menu-background-color);
+    fill: var(--menu-background-color) !important;
   }
 
   /* Wrapper for item list */
