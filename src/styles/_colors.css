@@ -8,6 +8,11 @@
 
   --header-color: #333;
   --base-font-color: #333;
+
+  /* --main-gradient: linear-gradient(45deg, #9d00ff 10%, #02c39d 90%); */
+  --main-gradient: linear-gradient(45deg, #9d00ff 10%, #02c39d 90%);
+
+  --hero-icon-color: #fff;
 }
 
 body {

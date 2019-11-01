@@ -10,6 +10,7 @@
   background-color: transparent;
   padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
   transition: 1s;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   & .logo--primary {
     color: var(--primary-logo-color);

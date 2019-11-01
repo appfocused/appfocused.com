@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { animated, useSpring } from 'react-spring';
 import * as styles from './hero.module.css';
 
 const reactLogo = require('../../assets/tech-logos/react-01.svg');
@@ -33,9 +34,38 @@ const technologies: ITechnology[] = [
   { src: webpackLogo, alt: 'Webpack' }
 ];
 
-const Hero = () => (
-  <section className={styles.hero}>
-    <div className={styles.header}>Great user experiences. Implemented.</div>
-  </section>
-);
+import InventicaLogo from '../../assets/client-logos/inventica.inline.svg';
+import GsLogo from '../../assets/client-logos/gs.inline.svg';
+import JohnLewisLogo from '../../assets/client-logos/john-lewis.inline.svg';
+import DeloitteLogo from '../../assets/client-logos/deloitte.inline.svg';
+
+const clients = [GsLogo, JohnLewisLogo, DeloitteLogo];
+
+const Hero: React.FunctionComponent = () => {
+  const props = useSpring({
+    opacity: 1,
+    marginTop: '10px',
+    from: { opacity: 0, marginTop: '-500px' },
+    delay: 500
+  });
+
+  return (
+    <section className={styles.hero}>
+      <animated.div className={styles.header} style={props}>
+        Great user experiences. Implemented.
+      </animated.div>
+      <p className={styles.intro}>
+        Easy to use interfaces, secure and performant, available on different
+        media and screen sizes, accessible for disabled users
+      </p>
+      <ul className={styles.clients}>
+        {clients.map((Logo, index) => (
+          <li key={`tech-${index}`}>
+            <Logo />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 export default Hero;

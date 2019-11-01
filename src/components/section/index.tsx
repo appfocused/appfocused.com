@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as styles from './section.module.css';
 import * as cx from 'classnames';
+import * as styles from './section.module.css';
 
 interface IProps {
   children: any;
