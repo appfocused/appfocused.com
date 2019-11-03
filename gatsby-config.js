@@ -123,10 +123,15 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: 'gatsby-plugin-svgr',
       options: {
-        rule: {
-          include: /\.inline\.svg$/
+        prettier: true,
+        svgo: false,
+        svgoConfig: {
+          plugins: {
+            removeUnknownsAndDefaults: false,
+            removeViewBox: false
+          }
         }
       }
     },
