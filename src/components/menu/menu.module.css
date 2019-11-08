@@ -8,6 +8,7 @@
     left: calc(100vw - 60px);
     top: 30px;
     transition: 1s;
+    mix-blend-mode: difference;
   }
 
   /* Color/shape of burger icon bars */

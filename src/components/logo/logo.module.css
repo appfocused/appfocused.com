@@ -2,7 +2,7 @@
   --primary-logo-color: #84d5f7;
   --secondary-logo-color: #dcdda4;
   --default-logo-color: #fff;
-  --logo-background: #380d42;
+  --logo-background: var(--primary-color-darkest);
 
   text-decoration: none;
   font-family: 'Roboto Mono';

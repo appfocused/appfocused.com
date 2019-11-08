@@ -1,7 +1,7 @@
 :root {
-  --menu-background-color: #491253;
+  --menu-background-color: var(--primary-color-darkest);
   --menu-item-color: #ecf0f1;
-  --menu-item-hover: #f1d87b;
+  --menu-item-hover: var(--secondary-color-light);
 
   --link-color: #333;
   --link-hover-color: #380d42;
@@ -9,9 +9,39 @@
   --header-color: #333;
   --base-font-color: #333;
 
-  /* --main-gradient: linear-gradient(45deg, #9d00ff 10%, #02c39d 90%); */
-  --main-gradient: linear-gradient(45deg, #9d00ff 10%, #02c39d 90%);
+  --primary-color-main: #9d00ff;
+  --primary-color-dark: #6400ca;
+  --primary-color-darkest: #56008c;
+  --primary-color-light: #d552ff;
 
+  --secondary-color-main: #02c39d;
+  --secondary-color-dark: #00916f;
+  --secondary-color-light: #5ef7ce;
+
+  /* --main-gradient: linear-gradient(45deg, #9d00ff 10%, #02c39d 90%); */
+  --main-gradient: linear-gradient(
+    45deg,
+    var(--primary-color-main) 10%,
+    var(--primary-color-dark) 90%
+  );
+
+  --main-gradient-reverse: linear-gradient(
+    45deg,
+    var(--primary-color-dark) 10%,
+    var(--primary-color-main) 90%
+  );
+
+  --secondary-gradient: linear-gradient(
+    45deg,
+    var(--secondary-color-main) 10%,
+    var(--secondary-color-dark) 90%
+  );
+
+  --hero-gradient: linear-gradient(
+    45deg,
+    var(--primary-color-main) 10%,
+    var(--secondary-color-main) 90%
+  );
   --hero-icon-color: #fff;
 }
 
@@ -30,8 +60,28 @@ h6 {
 
 a {
   color: var(--link-color);
+  transition: all 0.5s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--link-hover-color);
+  }
+}
+
+:global {
+  p a,
+  a.link {
+    box-shadow: inset 0 -0.475em 0 rgba(157, 0, 255, 0.3);
+    box-shadow: inset 0 -0.475em 0 rgba(157, 0, 255, 0.3);
+    text-decoration: none;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(157, 0, 255, 0.5);
+      box-shadow: inset 0 -0.475em 0 transparent;
+      text-decoration: none;
+    }
   }
 }

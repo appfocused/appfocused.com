@@ -88,10 +88,26 @@ code {
     text-align: center;
   }
 
+  .color-bar {
+    position: relative;
+    line-height: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: calc(50% - 1rem);
+      bottom: 0;
+      width: 2rem;
+      height: 0.25rem;
+      background-image: var(--main-gradient);
+    }
+  }
+
   .centered-text-block {
     display: block;
     text-align: center;
     max-width: 45rem;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
