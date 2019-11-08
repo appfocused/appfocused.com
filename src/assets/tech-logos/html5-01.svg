@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="356px" height="403px" viewBox="0 0 356 403" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg preserveAspectRatio="xMidYMid meet" width="356px" height="403px" viewBox="0 0 356 403" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="html5-01">
-            <path d="M178,0.8 L355.5,0.8 L323.6,361.9 L178,402.2 L32.4,361.9 L0.5,0.8 L178,0.8 Z M119.5,165.7 L115.6,120.5 L178,120.5 L178,76.1 L66.8,76.1 L79.1,210.1 L178,210.1 L178,165.7 L119.5,165.7 Z M128.7,267.2 L125.3,232 L80.7,232 L87.2,301.6 L178,326.9 L178,281 L128.7,267.2 Z M280.4,165.7 L178,165.7 L178,210.1 L232.5,210.1 L227.2,267.4 L178,281 L178,326.9 L268.4,301.6 L280.4,165.7 Z M284.8,120.5 L288.1,76.1 L178,76.1 L178,120.5 L284.8,120.5 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M178,0.8 L355.5,0.8 L323.6,361.9 L178,402.2 L32.4,361.9 L0.5,0.8 L178,0.8 Z M119.5,165.7 L115.6,120.5 L178,120.5 L178,76.1 L66.8,76.1 L79.1,210.1 L178,210.1 L178,165.7 L119.5,165.7 Z M128.7,267.2 L125.3,232 L80.7,232 L87.2,301.6 L178,326.9 L178,281 L128.7,267.2 Z M280.4,165.7 L178,165.7 L178,210.1 L232.5,210.1 L227.2,267.4 L178,281 L178,326.9 L268.4,301.6 L280.4,165.7 Z M284.8,120.5 L288.1,76.1 L178,76.1 L178,120.5 L284.8,120.5 Z" id="Combined-Shape" fill="url(#tech-gradient) #000" fill-rule="nonzero"></path>
             <g id="Group" transform="translate(66.000000, 76.000000)"></g>
             <g id="Group" transform="translate(66.000000, 76.000000)"></g>
         </g>

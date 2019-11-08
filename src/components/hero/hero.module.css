@@ -1,18 +1,38 @@
 .hero {
   color: white;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 4rem 2rem 1rem 2rem;
-  background-color: #511149;
+  position: relative;
+
+  /* background-color: #511149;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../../assets/polygons.jpg');
-  background-attachment: scroll;
+    url('../../assets/polygons.jpg'); */
+
+  background-color: #9d00ff;
+  background-image: var(--hero-gradient);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    background-image: url('../../assets/pattern.svg');
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }
+
+  /* background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center center; */
   overflow: hidden;
 
   @media screen and (min-width: 40em) {
@@ -25,13 +45,19 @@
   font-weight: 700;
   kerning: auto;
   text-rendering: optimizeLegibility;
-  font-size: var(--h1-font-size);
-
+  font-size: 2.5rem;
   max-width: 36rem;
   color: #fff;
   line-height: 1.1;
   margin-top: calc(var(--base-line-height) * 1rem);
+  margin-bottom: calc(var(--base-line-height) * 7rem);
   hyphens: manual;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  mix-blend-mode: overlay;
+
+  @media screen and (min-width: 40em) {
+    font-size: 4rem;
+  }
 }
 
 .subheader {
@@ -43,38 +69,46 @@
   margin-bottom: 1rem;
 }
 
-.tech {
-  margin: 0;
+.clients-container {
+  position: absolute;
+  padding: 1.5rem 2rem;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: multiply;
+
+  & .clients-title {
+    flex-base: 100%;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: var(--small-font-size);
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
+    mix-blend-mode: difference;
+  }
+}
+
+.clients {
   padding: 0;
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
+  height: 2rem;
 
-  & li {
-    margin: 0;
-    width: 6rem;
-    text-align: center;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+  & svg {
+    height: 100%;
+    width: 100%;
+    flex-grow: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
-    & img {
-      height: 3rem;
-      opacity: 0.8;
+    &:first-child {
+      margin-left: 0;
     }
 
-    & span {
-      display: block;
-      visibility: hidden;
-      font-family: 'Roboto Mono';
-      font-weight: 300;
-      font-size: var(--small-font-size);
-    }
-
-    &:hover {
-      & span {
-        visibility: visible;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -82,4 +116,41 @@
 .item {
   display: flex;
   flex-flow: row wrap;
+}
+
+.intro {
+  max-width: 40rem;
+}
+
+.why-us-container {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+
+  .why-us {
+    min-width: 300px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: var(--small-font-size);
+
+    & .heading {
+      font-weight: bold;
+    }
+
+    & img {
+      height: 3rem;
+      opacity: 0.8;
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (min-width: 40em) {
+      min-width: 200px;
+      justify-content: space-between;
+    }
+  }
 }

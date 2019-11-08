@@ -17,6 +17,7 @@ declare module 'disqus-react' {
 
 declare module '*.css';
 declare module '*.jpg';
+declare module '*.svg';
 
 declare module 'typography-theme-wordpress-2016';
 declare module 'typography';

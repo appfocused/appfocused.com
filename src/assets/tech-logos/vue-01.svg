@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="262px" height="227px" viewBox="0 0 262 227" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg preserveAspectRatio="xMidYMid meet" width="262px" height="227px" viewBox="0 0 262 227" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="vue-01" transform="translate(-1.000000, -2.000000)" fill-rule="nonzero" fill="#FFFFFF">
+        <g id="vue-01" transform="translate(-1.000000, -2.000000)" fill-rule="nonzero" fill="url(#tech-gradient) #000">
             <g id="Group" transform="translate(132.683800, 115.345000) scale(-1, 1) rotate(-180.000000) translate(-132.683800, -115.345000) translate(0.687100, 0.681200)">
                 <g transform="translate(0.079998, 0.013333)" id="Shape" opacity="0.5">
                     <polygon points="161.3293 227.9943 131.104722 175.643609 100.880145 227.9943 0.2279943 227.9943 131.104722 1.306634 261.98145 227.9943"></polygon>

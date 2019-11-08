@@ -76,7 +76,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Roboto', 'Roboto Mono']
+          families: ['Roboto', 'Roboto Mono', 'Roboto Light']
         }
       }
     },
@@ -120,6 +120,19 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         exclude: ['/home', '/home/*']
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        prettier: true,
+        svgo: false,
+        svgoConfig: {
+          plugins: {
+            removeUnknownsAndDefaults: false,
+            removeViewBox: false
+          }
+        }
       }
     },
     `gatsby-plugin-transition-link`

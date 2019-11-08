@@ -8,6 +8,7 @@
     left: calc(100vw - 60px);
     top: 30px;
     transition: 1s;
+    mix-blend-mode: difference;
   }
 
   /* Color/shape of burger icon bars */
@@ -23,8 +24,8 @@
   & .bm-cross-button {
     height: 24px;
     width: 24px;
-    right: 1rem;
-    top: 1rem;
+    right: 2rem !important;
+    top: 2rem !important;
   }
 
   /* Color/shape of close button cross */

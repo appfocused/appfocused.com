@@ -2,11 +2,11 @@
   --min-font-size: 1;
   --max-font-size: 1.25;
 
-  --body-font: 'Roboto', system-ui, -apple-system;
+  --body-font: 'Roboto Light', system-ui, -apple-system;
   --heading-font: 'Roboto', system-ui, -apple-system;
 
   --base-font-size: calc(var(--min-font-size) * 1rem);
-  --base-font-weight: 400;
+  --base-font-weight: 300;
   --modular-scale: 1.25;
 
   --h1-font-size: calc(
@@ -33,12 +33,12 @@
 
   @media screen and (min-width: 70em) {
     --base-font-size: calc(var(--max-font-size) * 1rem);
-    --base-font-weight: 500;
+    --base-font-weight: 300;
   }
 }
 
 body {
-  hyphens: auto;
+  hyphens: none;
   font-family: var(--body-font);
   font-size: var(--base-font-size);
   font-weight: var(--base-font-weight);
@@ -81,4 +81,33 @@ a[href] {
 
 code {
   font-size: var(--small-font-size);
+}
+
+:global {
+  .centered {
+    text-align: center;
+  }
+
+  .color-bar {
+    position: relative;
+    line-height: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: calc(50% - 1rem);
+      bottom: 0;
+      width: 2rem;
+      height: 0.25rem;
+      background-image: var(--main-gradient);
+    }
+  }
+
+  .centered-text-block {
+    display: block;
+    text-align: center;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
