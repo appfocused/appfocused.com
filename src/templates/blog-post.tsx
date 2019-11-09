@@ -56,9 +56,9 @@ class BlogPostTemplate extends React.Component<any, any> {
               padding: 0
             }}
           >
-            {!next &&
-              previous && (
-                <li>
+            {!next && previous && (
+              <li>
+                <p>
                   <span>Read previous: </span>
                   <AniLink
                     to={previous.fields.slug}
@@ -68,8 +68,9 @@ class BlogPostTemplate extends React.Component<any, any> {
                   >
                     {previous.frontmatter.title}
                   </AniLink>
-                </li>
-              )}
+                </p>
+              </li>
+            )}
 
             {next && (
               <li>
