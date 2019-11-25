@@ -31,6 +31,7 @@ import { ReactComponent as WebpackLogo } from '../../assets/tech-logos/webpack-0
 // import {ReactComponent as TechLogo} sassLogo from '../../assets/tech-logos/sass-01.svg';
 import { ReactComponent as PostcssLogo } from '../../assets/tech-logos/postcss.svg';
 import Tech from '../../components/tech';
+import WhyUs from '../../components/why-us';
 
 const technologies = [
   ReactLogo,
@@ -192,10 +193,8 @@ export default (props: IProps) => {
             </a>
           </Grid>
         </Section>
-        <Section className={styles.darkSection}>
-          <h2 className="centered color-bar">Tech choices</h2>
-          <Tech />
-        </Section>
+        <Tech />
+        <WhyUs />
         <Section>
           <Grid columns={1}>
             <div>

@@ -32,34 +32,6 @@
   }
 }
 
-.dark-section {
-  background-color: #23005e;
-  color: var(--secondary-color-light);
-  position: relative;
-
-  &:before {
-    position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0.3;
-    background-image: url('../../assets/stars-bg.png');
-    background-size: 120%;
-    animation: animatedBackground 30s ease infinite;
-    background-position: 0 0;
-    background-attachment: fixed;
-  }
-
-  h1,
-  h2,
-  h3,
-  p {
-    color: var(--primary-color-main);
-  }
-}
-
 .icon-svg {
   height: calc(var(--base-font-size) * 3);
   margin-bottom: 0.5rem;

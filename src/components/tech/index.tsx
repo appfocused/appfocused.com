@@ -15,6 +15,8 @@ import { ReactComponent as webpackLogo } from '../../assets/tech-logos/webpack-0
 import { ReactComponent as sassLogo } from '../../assets/tech-logos/sass-01.svg';
 import { ReactComponent as electronLogo } from '../../assets/tech-logos/electron.svg';
 import { ReactComponent as postcssLogo } from '../../assets/tech-logos/postcss.svg';
+import { ReactComponent as webComponents } from '../../assets/tech-logos/web-components.svg';
+import Section from '../section';
 
 interface ITechnology {
   src: string;
@@ -22,23 +24,23 @@ interface ITechnology {
 }
 
 const technologies: ITechnology[] = [
+  { src: htmlLogo, alt: 'HTML5' },
   { src: jsLogo, alt: 'JavaScript' },
   { src: tsLogo, alt: 'TypeScript' },
   { src: nodeLogo, alt: 'NodeJS' },
+  { src: webComponents, alt: 'Web Components' },
   { src: reactLogo, alt: 'React' },
   { src: vueLogo, alt: 'Vue' },
-  { src: meteorLogo, alt: 'Meteor' },
   { src: reduxLogo, alt: 'Redux' },
   { src: postcssLogo, alt: 'PostCSS' },
   { src: awsLogo, alt: 'AWS' },
   { src: electronLogo, alt: 'Electron' }
 ];
 
-console.log({ technologies });
-
 const Tech: React.FunctionComponent = () => {
   return (
-    <>
+    <Section className={styles.darkSection}>
+      <h2 className="centered color-bar">Tech choices</h2>
       <svg
         style={{ width: 0, height: 0, position: 'absolute' }}
         aria-hidden="true"
@@ -57,7 +59,7 @@ const Tech: React.FunctionComponent = () => {
           </li>
         ))}
       </ul>
-    </>
+    </Section>
   );
 };
 

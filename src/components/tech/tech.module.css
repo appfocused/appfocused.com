@@ -12,7 +12,7 @@
     height: 3rem;
     text-align: center;
     line-height: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 
     & svg,
     & img {
@@ -36,5 +36,33 @@
         visibility: visible;
       }
     }
+  }
+}
+
+.dark-section {
+  background-color: #23005e;
+  color: var(--secondary-color-light);
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.3;
+    background-image: url('../../assets/stars-bg.png');
+    background-size: 120%;
+    animation: animatedBackground 20s linear infinite;
+    background-position: 0 0;
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: var(--primary-color-main);
   }
 }
