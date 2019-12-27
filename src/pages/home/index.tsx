@@ -116,36 +116,42 @@ export default (props: IProps) => {
         <Section className={styles.greySection}>
           <h2 className="centered color-bar">How can we help?</h2>
           <Grid columns={3}>
-            <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
-              <span className={styles.iconSvg}>
-                <WebIcon />
-              </span>
-              <h3>Web</h3>
+            <div>
+              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+                <span className={styles.iconSvg}>
+                  <WebIcon />
+                </span>
+                <h3>Web</h3>
+              </a>
               <p>
                 Web applications development is our core area of expertise and
                 passion. Not only we know how to build slick and functional
                 front-ends, but we also have a good insight on how to integrate
                 it into your existing services and&nbsp;platforms.
               </p>
-            </a>
-            <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
-              <span className={styles.iconSvg}>
-                <DesktopIcon />
-              </span>
-              <h3>Desktop</h3>
+            </div>
+            <div>
+              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+                <span className={styles.iconSvg}>
+                  <DesktopIcon />
+                </span>
+                <h3>Desktop</h3>
+              </a>
               <p>
                 Modern frameworks such as Electron and Openfin allow us to reuse
                 our web expertise to rapidly produce complex and secure desktop
                 applications for Windows, Mac and Linux, allowing to reduce time
                 to market for multi-platform apps.
               </p>
-            </a>
-            <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
-              <div className={styles.iconSvg}>
-                <MobileIcon />
-              </div>
+            </div>
+            <div>
+              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+                <div className={styles.iconSvg}>
+                  <MobileIcon />
+                </div>
 
-              <h3>Mobile</h3>
+                <h3>Mobile</h3>
+              </a>
 
               <p>
                 React Native is a JavaScript framework that allows us to rapidly
@@ -154,43 +160,49 @@ export default (props: IProps) => {
                 interfaces in both platforms helps to avoid performance
                 problems.
               </p>
-            </a>
-            <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
-              <span className={styles.iconSvg}>
-                <AuditIcon />
-              </span>
-              <h3>Code reviews and audit</h3>
+            </div>
+            <div>
+              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+                <span className={styles.iconSvg}>
+                  <AuditIcon />
+                </span>
+                <h3>Code reviews and audit</h3>
+              </a>
               <p>
                 Understanding risks and technical debts now can pay off
                 considerably in the future. We thoroughly analyse your web
                 application to surface risks and to provide you with immediately
                 actionable&nbsp;plan.
               </p>
-            </a>
-            <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
-              <span className={styles.iconSvg}>
-                <RescueIcon />
-              </span>
-              <h3>Rescue mission</h3>
+            </div>
+            <div>
+              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+                <span className={styles.iconSvg}>
+                  <RescueIcon />
+                </span>
+                <h3>Rescue mission</h3>
+              </a>
               <p>
                 Our in-depth understanding of web technologies and a set of
                 proven debug techniques allow us to find and eliminate defects
                 and performance issues in your existing app within
                 short&nbsp;timeframes.
               </p>
-            </a>
-            <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
-              <span className={styles.iconSvg}>
-                <RecruitmentIcon />
-              </span>
-              <h3>Hiring help</h3>
+            </div>
+            <div>
+              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+                <span className={styles.iconSvg}>
+                  <RecruitmentIcon />
+                </span>
+                <h3>Hiring help</h3>
+              </a>
               <p>
                 The right mix of tech interviews, live coding and problem
                 solving exercises allows us to cherry pick the best
                 technically-apt web developers, assess their seniority and
                 validate their track&nbsp;record.
               </p>
-            </a>
+            </div>
           </Grid>
         </Section>
         <Tech />
