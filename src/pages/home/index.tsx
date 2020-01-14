@@ -94,16 +94,28 @@ export default (props: IProps) => {
                 <stop offset="50%" stop-color="var(--primary-color-main)" />
               </linearGradient>
             </svg>
-            <div>
+            <div
+              style={{
+                maxWidth: '740px',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+              }}
+            >
               <h2 className="centered color-bar">User interface experts</h2>
-              <p className="centered-text-block">
-                We are London-based bespoke front-end development experts,
-                specialising in executing complex business-critical
-                user&nbsp;interfaces. We help our clients navigate an
-                increasingly complex technology landscape and consistently
-                deliver slick, engaging, secure and accessible apps that drive
-                growth, empower and enable an organisation to continuously
-                learn, challenge and evolve.
+              <p className="">
+                We believe in digital experiences that make a difference.
+              </p>
+              <p className="">
+                With our technology expertise, passion for craftsmanship and
+                deep commitment to&nbsp;make the web better for every user, we
+                are best positioned for creating engaging and
+                user-friendly&nbsp;interfaces, that in turn drive growth and
+                empower&nbsp;organisations.
+              </p>
+              <p className="">
+                We help our clients navigate an increasingly complex technology
+                landscape and fast-forward time to market with our all-star
+                front-end development team.
               </p>
               <p className="centered">
                 <button className={styles.cta} onClick={handleClick}>
