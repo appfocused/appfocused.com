@@ -9,11 +9,11 @@ const menuItems = [
     icon: 'fa-star-o',
     name: 'Home'
   },
-  // {
-  //   href: '/services',
-  //   icon: 'fa-rocket',
-  //   name: 'Services'
-  // },
+  {
+    href: '/front-end-development',
+    icon: 'fa-rocket',
+    name: 'Front-end Dev'
+  },
   {
     href: '/blog',
     icon: 'fa-pencil',

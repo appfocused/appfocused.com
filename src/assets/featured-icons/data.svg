@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="data" transform="translate(1.000000, 5.282609)" stroke="#666666">
+            <line x1="7" y1="6.7173913" x2="4" y2="9.7173913" id="Line_50"></line>
+            <line x1="19" y1="4.7173913" x2="16.5" y2="7.2173913" id="Line_51"></line>
+            <line x1="13" y1="7.7173913" x2="10" y2="5.7173913" id="Line_52"></line>
+            <circle id="Ellipse_40" cx="2" cy="11.7173913" r="2"></circle>
+            <circle id="Ellipse_41" cx="8" cy="4.7173913" r="2"></circle>
+            <circle id="Ellipse_42" cx="15" cy="8.7173913" r="2"></circle>
+            <circle id="Ellipse_43" cx="20" cy="2.7173913" r="2"></circle>
+        </g>
+    </g>
+</svg>

@@ -51,6 +51,10 @@
     padding: 0.8em;
   }
 
+  & .bm-item {
+    outline: none;
+  }
+
   & .bm-item a {
     color: var(--menu-item-color);
     text-decoration: none;

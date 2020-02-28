@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="interface" transform="translate(0.000000, 2.000000)">
+            <circle id="Ellipse_12" fill="#666666" fill-rule="nonzero" cx="12.0050323" cy="14.9643871" r="1"></circle>
+            <rect id="Rectangle_12" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" x="0.342580645" y="0.342580645" width="23.3249032" height="16.7496774" rx="3.645"></rect>
+            <polygon id="Path_254" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" points="15.0011613 20.5869677 9.00890323 20.5869677 9.64722581 17.1367742 14.3643871 17.1367742"></polygon>
+            <line x1="7.98387097" y1="20.5869677" x2="16.0258065" y2="20.5869677" id="Line_27" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="0.342580645" y1="12.9870968" x2="23.6674839" y2="12.9870968" id="Line_28" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <circle id="Ellipse_13" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" cx="8.54593548" cy="5.72167742" r="1"></circle>
+            <polygon id="Path_255" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" points="15.7420645 10.9792258 12.1869677 6.05535484 9.73122581 9.10064516 8.15264516 7.97806452 5.64309677 10.9776774"></polygon>
+            <rect id="Rectangle_13" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" x="2.31909677" y="2.31909677" width="1.64167742" height="6.432"></rect>
+            <rect id="Rectangle_14" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" x="17.7023226" y="2.31909677" width="3.98864516" height="8.64232258"></rect>
+            <line x1="4.12529032" y1="2.31909677" x2="17.7023226" y2="2.31909677" id="Line_29" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="5.8796129" y1="2.34812903" x2="5.8796129" y2="3.16567742" id="Line_30" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="7.53483871" y1="2.34812903" x2="7.53483871" y2="3.16567742" id="Line_31" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="9.19006452" y1="2.34812903" x2="9.19006452" y2="3.16567742" id="Line_32" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="10.8452903" y1="2.34812903" x2="10.8452903" y2="3.16567742" id="Line_33" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="12.5005161" y1="2.34812903" x2="12.5005161" y2="3.16567742" id="Line_34" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="14.1557419" y1="2.34812903" x2="14.1557419" y2="3.16567742" id="Line_35" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="15.8109677" y1="2.34812903" x2="15.8109677" y2="3.16567742" id="Line_36" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="19.1864516" y1="3.82916129" x2="20.2064516" y2="3.82916129" id="Line_37" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="19.1864516" y1="4.96567742" x2="20.2064516" y2="4.96567742" id="Line_38" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="19.1864516" y1="6.10180645" x2="20.2064516" y2="6.10180645" id="Line_39" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="19.1864516" y1="7.23832258" x2="20.2064516" y2="7.23832258" id="Line_40" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="9.99251613" y1="8.77625806" x2="9.25587097" y2="9.70877419" id="Line_41" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></line>
+        </g>
+    </g>
+</svg>

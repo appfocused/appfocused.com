@@ -6,6 +6,7 @@ interface IProps {
   children: any;
   isFullWidth?: boolean;
   isBlog?: boolean;
+  isSubpage?: boolean;
   backgroundStyle?: any;
   style?: any;
 }

@@ -1,14 +1,40 @@
 import * as React from 'react';
 import * as styles from './grid.module.css';
 
-const style = (col: number) => ({
-  gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`
-});
+interface IGrid {
+  gridTemplateColumns?: any;
+  hasLeftSidebar?: boolean;
+  hasRightSidebar?: boolean;
+  children: any;
+}
 
-const Grid = ({ columns = 3, children }: any) => (
-  <section className={styles.wrapper} style={style(columns)}>
-    {children}
-  </section>
-);
+const defaultStyle = {
+  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
+};
+
+const Grid = ({
+  hasLeftSidebar,
+  hasRightSidebar,
+  gridTemplateColumns = defaultStyle,
+  children
+}: IGrid) => {
+  const hasSidebar = Boolean(hasLeftSidebar || hasRightSidebar);
+  const getSidebarClass = () => {
+    if (!hasSidebar) {
+      return;
+    }
+
+    return hasLeftSidebar ? styles.leftSidebar : styles.rightSidebar;
+  };
+  const sectionStyle = hasSidebar ? {} : gridTemplateColumns;
+  return (
+    <section
+      className={`${styles.wrapper} ${getSidebarClass()}`}
+      style={sectionStyle}
+    >
+      {children}
+    </section>
+  );
+};
 
 export default Grid;

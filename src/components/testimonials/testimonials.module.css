@@ -1,0 +1,27 @@
+.container {
+  background-image: url('../../assets/quote.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 2rem;
+  min-height: 400px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: Roboto;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: Roboto;
+}

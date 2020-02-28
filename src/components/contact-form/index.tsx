@@ -79,19 +79,19 @@ class Form extends React.Component<IFormProps, IState> {
       >
         <div>
           <label>
-            Name:
+            Name
             <input type="text" {...bindInput('name')} required />
           </label>
         </div>
         <div>
           <label>
-            Email:
+            Email
             <input type="email" {...bindInput('email')} required />
           </label>
         </div>
         <div>
           <label>
-            About your project:
+            About your project
             <textarea
               rows={4}
               className={styles.content}

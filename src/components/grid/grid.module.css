@@ -1,4 +1,28 @@
+@import '../../styles/_mq.css';
+
 .wrapper {
   display: grid;
   grid-gap: var(--grid-gap);
+}
+
+.right-sidebar {
+  grid-template-columns: 1fr;
+
+  @media (--tablet-viewport) {
+    grid-template-columns: minmax(50%, 60%) 1fr;
+    max-width: var(--laptop-viewport);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.left-sidebar {
+  grid-template-columns: 1fr;
+
+  @media (--tablet-viewport) {
+    grid-template-columns: 1fr minmax(50%, 60%);
+    max-width: var(--laptop-viewport);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

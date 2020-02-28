@@ -3,7 +3,7 @@
   --max-font-size: 1.25;
 
   --body-font: 'Roboto Light', system-ui, -apple-system;
-  --heading-font: 'Roboto', system-ui, -apple-system;
+  --heading-font: 'Montserrat', system-ui, -apple-system;
 
   --base-font-size: calc(var(--min-font-size) * 1rem);
   --base-font-weight: 300;

@@ -1,0 +1,74 @@
+.featured {
+  border-radius: 1rem;
+  min-height: 200px;
+  top: calc(-100px - var(--grid-gap));
+  margin-bottom: -140px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(47, 47, 47, 10%);
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+
+  @media screen and (min-width: 60em) {
+    flex-wrap: nowrap;
+  }
+}
+
+.featured-header {
+  font-size: 2rem;
+  color: var(--primary-color-main);
+  font-family: var(--heading-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  @media screen and (min-width: 60em) {
+    width: 40%;
+    padding-right: 2rem;
+  }
+}
+
+.featured-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  font-size: 0.85rem;
+  width: 60%;
+
+  li {
+    width: 100%;
+    line-height: 2rem;
+
+    @media screen and (min-width: 40em) {
+      width: 50%;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.featured-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.rwd {
+  background: none;
+  position: relative;
+
+  @media screen and (min-width: 50em) {
+    background: url('../../assets/illustrations/finance-rwd.png');
+    background-repeat: no-repeat;
+    background-position: left 62vw center;
+    background-size: 50%;
+  }
+}

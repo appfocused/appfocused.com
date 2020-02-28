@@ -84,14 +84,14 @@ export default (props: IProps) => {
               focusable="false"
             >
               <linearGradient id="icon-gradient" x2="1" y2="1">
-                <stop offset="0%" stop-color="var(--primary-color-dark)" />
-                <stop offset="100%" stop-color="var(--primary-color-light)" />
-                <stop offset="50%" stop-color="var(--primary-color-main)" />
+                <stop offset="0%" stopColor="var(--primary-color-dark)" />
+                <stop offset="100%" stopColor="var(--primary-color-light)" />
+                <stop offset="50%" stopColor="var(--primary-color-main)" />
               </linearGradient>
               <linearGradient id="icon-gradient-hover" x2="1" y2="1">
-                <stop offset="0%" stop-color="var(--primary-color-light)" />
-                <stop offset="100%" stop-color="var(--primary-color-dark)" />
-                <stop offset="50%" stop-color="var(--primary-color-main)" />
+                <stop offset="0%" stopColor="var(--primary-color-light)" />
+                <stop offset="100%" stopColor="var(--primary-color-dark)" />
+                <stop offset="50%" stopColor="var(--primary-color-main)" />
               </linearGradient>
             </svg>
             <div
@@ -129,7 +129,10 @@ export default (props: IProps) => {
           <h2 className="centered color-bar">How can we help?</h2>
           <Grid columns={3}>
             <div>
-              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+              <a
+                href="/front-end-development"
+                className={`${styles.column} ${styles.servicesLink}`}
+              >
                 <span className={styles.iconSvg}>
                   <WebIcon />
                 </span>
@@ -143,7 +146,10 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+              <a
+                href="/front-end-development"
+                className={`${styles.column} ${styles.servicesLink}`}
+              >
                 <span className={styles.iconSvg}>
                   <DesktopIcon />
                 </span>
@@ -157,7 +163,10 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+              <a
+                href="/front-end-development"
+                className={`${styles.column} ${styles.servicesLink}`}
+              >
                 <div className={styles.iconSvg}>
                   <MobileIcon />
                 </div>
@@ -174,7 +183,10 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+              <a
+                href="/front-end-development"
+                className={`${styles.column} ${styles.servicesLink}`}
+              >
                 <span className={styles.iconSvg}>
                   <AuditIcon />
                 </span>
@@ -188,7 +200,10 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+              <a
+                href="/front-end-development"
+                className={`${styles.column} ${styles.servicesLink}`}
+              >
                 <span className={styles.iconSvg}>
                   <RescueIcon />
                 </span>
@@ -202,7 +217,10 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a href="#" className={`${styles.column} ${styles.servicesLink}`}>
+              <a
+                href="/front-end-development"
+                className={`${styles.column} ${styles.servicesLink}`}
+              >
                 <span className={styles.iconSvg}>
                   <RecruitmentIcon />
                 </span>
