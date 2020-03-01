@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import Hero from '../../components/hero';
 import Layout from '../../components/layout/layout';
@@ -72,12 +73,17 @@ export default (props: IProps) => {
       <Layout>
         <Helmet>
           <title>Appfocused: great user experiences. Implemented</title>
-          <meta name="description" content="Appfocused" />
+          <meta
+            name="description"
+            content="We believe in digital experiences that make a difference. We build engaging and
+            user-friendly interfaces for digital products, that in turn drive growth and
+            empower organisations."
+          />
         </Helmet>
         <ToastContainer />
         <Hero />
         <Section>
-          <Grid columns={1}>
+          <Grid>
             <svg
               style={{ width: 0, height: 0, position: 'absolute' }}
               aria-hidden="true"
@@ -127,17 +133,17 @@ export default (props: IProps) => {
         </Section>
         <Section className={styles.greySection}>
           <h2 className="centered color-bar">How can we help?</h2>
-          <Grid columns={3}>
+          <Grid>
             <div>
-              <a
-                href="/front-end-development"
+              <Link
+                to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
                 <span className={styles.iconSvg}>
                   <WebIcon />
                 </span>
                 <h3>Web</h3>
-              </a>
+              </Link>
               <p>
                 Web applications development is our core area of expertise and
                 passion. Not only we know how to build slick and functional
@@ -146,15 +152,15 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a
-                href="/front-end-development"
+              <Link
+                to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
                 <span className={styles.iconSvg}>
                   <DesktopIcon />
                 </span>
                 <h3>Desktop</h3>
-              </a>
+              </Link>
               <p>
                 Modern frameworks such as Electron and Openfin allow us to reuse
                 our web expertise to rapidly produce complex and secure desktop
@@ -163,8 +169,8 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a
-                href="/front-end-development"
+              <Link
+                to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
                 <div className={styles.iconSvg}>
@@ -172,7 +178,7 @@ export default (props: IProps) => {
                 </div>
 
                 <h3>Mobile</h3>
-              </a>
+              </Link>
 
               <p>
                 React Native is a JavaScript framework that allows us to rapidly
@@ -183,15 +189,15 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a
-                href="/front-end-development"
+              <Link
+                to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
                 <span className={styles.iconSvg}>
                   <AuditIcon />
                 </span>
                 <h3>Code reviews and audit</h3>
-              </a>
+              </Link>
               <p>
                 Understanding risks and technical debts now can pay off
                 considerably in the future. We thoroughly analyse your web
@@ -200,15 +206,15 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a
-                href="/front-end-development"
+              <Link
+                to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
                 <span className={styles.iconSvg}>
                   <RescueIcon />
                 </span>
                 <h3>Rescue mission</h3>
-              </a>
+              </Link>
               <p>
                 Our in-depth understanding of web technologies and a set of
                 proven debug techniques allow us to find and eliminate defects
@@ -217,15 +223,15 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <a
-                href="/front-end-development"
+              <Link
+                to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
                 <span className={styles.iconSvg}>
                   <RecruitmentIcon />
                 </span>
                 <h3>Hiring help</h3>
-              </a>
+              </Link>
               <p>
                 The right mix of tech interviews, live coding and problem
                 solving exercises allows us to cherry pick the best
@@ -238,7 +244,7 @@ export default (props: IProps) => {
         <Tech />
         <WhyUs />
         <Section>
-          <Grid columns={1}>
+          <Grid>
             <div>
               <h2 name="contacts">Have a project in mind?</h2>
               <ContactForm />

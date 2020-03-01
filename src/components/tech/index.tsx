@@ -47,8 +47,8 @@ const Tech: React.FunctionComponent = () => {
         focusable="false"
       >
         <linearGradient id="tech-gradient" x2="1" y2="1">
-          <stop offset="0%" stop-color="var(--primary-color-main)" />
-          <stop offset="100%" stop-color="var(--secondary-color-main)" />
+          <stop offset="0%" stopColor="var(--primary-color-main)" />
+          <stop offset="100%" stopColor="var(--secondary-color-main)" />
         </linearGradient>
       </svg>
       <ul className={styles.tech}>
