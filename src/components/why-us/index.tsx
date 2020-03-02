@@ -32,9 +32,8 @@ const WhyUs: React.FunctionComponent = () => {
           quote!
         </div>
         <div>
-          <div className={styles.subheader}>No charge to fix our own bugs</div>A
-          good motivation for us to vigorously test our code prior to prod
-          release.
+          <div className={styles.subheader}>Full money back guarantee</div>
+          100% satisfaction with our work or your money back. No compromises.
         </div>
       </Grid>
     </Section>

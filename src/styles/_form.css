@@ -24,3 +24,7 @@
     color: #fff;
   }
 }
+
+.cta {
+  margin-top: calc(var(--base-line-height) * 1rem);
+}
