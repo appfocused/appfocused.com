@@ -33,7 +33,8 @@ const WhyUs: React.FunctionComponent = () => {
         </div>
         <div>
           <div className={styles.subheader}>Full money back guarantee</div>
-          100% satisfaction with our work or your money back. No compromises.
+          100% satisfaction with our work or your money back. No strings
+          attached.
         </div>
       </Grid>
     </Section>

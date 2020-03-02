@@ -83,13 +83,18 @@ class Form extends React.Component<IFormProps, IState> {
             <input type="text" {...bindInput('name')} required />
           </label>
         </div>
-        <div>
+        <div className={styles.emailWrapper}>
           <label>
             Email
             <input type="email" {...bindInput('email')} required />
           </label>
+          <div className={styles.emailTips}>
+            Only for prompt response to your request.
+            <br />
+            No spam, we promise.
+          </div>
         </div>
-        <div>
+        <div className={styles.contentWrapper}>
           <label>
             About your project
             <textarea
@@ -99,11 +104,21 @@ class Form extends React.Component<IFormProps, IState> {
               required
             />
           </label>
+          <div className={styles.tips}>
+            Please touch on these things:
+            <ul>
+              <li>Your product</li>
+              <li>Your timeline</li>
+              <li>Your location</li>
+              <li>Where you heard about us</li>
+            </ul>
+          </div>
         </div>
-        <div>
+        <div className={styles.ctaWrapper}>
           <button type="submit" className={styles.cta} disabled={isSubmitting}>
             {!isSubmitting ? 'Send' : 'Sending...'}
           </button>
+          <div className={styles.submitTips}>Ready to innovate?</div>
         </div>
       </form>
     );
