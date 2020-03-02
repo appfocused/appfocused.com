@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Helmet from 'react-helmet';
 import Hero from '../../components/hero';
 import Layout from '../../components/layout/layout';
@@ -135,7 +135,9 @@ export default (props: IProps) => {
           <h2 className="centered color-bar">How can we help?</h2>
           <Grid>
             <div>
-              <Link
+              <AniLink
+                cover
+                direction="left"
                 to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
@@ -143,7 +145,7 @@ export default (props: IProps) => {
                   <WebIcon />
                 </span>
                 <h3>Web</h3>
-              </Link>
+              </AniLink>
               <p>
                 Web applications development is our core area of expertise and
                 passion. Not only we know how to build slick and functional
@@ -152,7 +154,9 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <Link
+              <AniLink
+                cover
+                direction="left"
                 to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
@@ -160,7 +164,7 @@ export default (props: IProps) => {
                   <DesktopIcon />
                 </span>
                 <h3>Desktop</h3>
-              </Link>
+              </AniLink>
               <p>
                 Modern frameworks such as Electron and Openfin allow us to reuse
                 our web expertise to rapidly produce complex and secure desktop
@@ -169,7 +173,9 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <Link
+              <AniLink
+                cover
+                direction="left"
                 to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
@@ -178,7 +184,7 @@ export default (props: IProps) => {
                 </div>
 
                 <h3>Mobile</h3>
-              </Link>
+              </AniLink>
 
               <p>
                 React Native is a JavaScript framework that allows us to rapidly
@@ -189,7 +195,9 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <Link
+              <AniLink
+                cover
+                direction="left"
                 to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
@@ -197,7 +205,7 @@ export default (props: IProps) => {
                   <AuditIcon />
                 </span>
                 <h3>Code reviews and audit</h3>
-              </Link>
+              </AniLink>
               <p>
                 Understanding risks and technical debts now can pay off
                 considerably in the future. We thoroughly analyse your web
@@ -206,7 +214,9 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <Link
+              <AniLink
+                cover
+                direction="left"
                 to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
@@ -214,7 +224,7 @@ export default (props: IProps) => {
                   <RescueIcon />
                 </span>
                 <h3>Rescue mission</h3>
-              </Link>
+              </AniLink>
               <p>
                 Our in-depth understanding of web technologies and a set of
                 proven debug techniques allow us to find and eliminate defects
@@ -223,7 +233,9 @@ export default (props: IProps) => {
               </p>
             </div>
             <div>
-              <Link
+              <AniLink
+                cover
+                direction="left"
                 to="/front-end-development"
                 className={`${styles.column} ${styles.servicesLink}`}
               >
@@ -231,7 +243,7 @@ export default (props: IProps) => {
                   <RecruitmentIcon />
                 </span>
                 <h3>Hiring help</h3>
-              </Link>
+              </AniLink>
               <p>
                 The right mix of tech interviews, live coding and problem
                 solving exercises allows us to cherry pick the best

@@ -72,55 +72,68 @@ class Form extends React.Component<IFormProps, IState> {
     const { isSubmitting } = this.state;
 
     return (
-      <form
-        name="contact-form"
-        className={styles.form}
-        onSubmit={this.handleSubmit}
-      >
-        <div>
-          <label>
-            Name
-            <input type="text" {...bindInput('name')} required />
-          </label>
-        </div>
-        <div className={styles.emailWrapper}>
-          <label>
-            Email
-            <input type="email" {...bindInput('email')} required />
-          </label>
-          <div className={styles.emailTips}>
-            Only for prompt response to your request.
-            <br />
-            No spam, we promise.
+      <>
+        <p>
+          Give us a call on <a href="tel:+442074594381">+44 (0) 207 459 4381</a>{' '}
+          to have a chat
+          <br />
+          or drop us a line in the form below &mdash; we'll get back to you
+          swiftly.
+        </p>
+        <form
+          name="contact-form"
+          className={styles.form}
+          onSubmit={this.handleSubmit}
+        >
+          <div>
+            <label>
+              Name
+              <input type="text" {...bindInput('name')} required />
+            </label>
           </div>
-        </div>
-        <div className={styles.contentWrapper}>
-          <label>
-            About your project
-            <textarea
-              rows={4}
-              className={styles.content}
-              {...bindInput('content')}
-              required
-            />
-          </label>
-          <div className={styles.tips}>
-            Please touch on these things:
-            <ul>
-              <li>Your product</li>
-              <li>Your timeline</li>
-              <li>Your location</li>
-              <li>Where you heard about us</li>
-            </ul>
+          <div className={styles.emailWrapper}>
+            <label>
+              Email
+              <input type="email" {...bindInput('email')} required />
+            </label>
+            <div className={styles.emailTips}>
+              Only for prompt response to your request.
+              <br />
+              No spam, we promise.
+            </div>
           </div>
-        </div>
-        <div className={styles.ctaWrapper}>
-          <button type="submit" className={styles.cta} disabled={isSubmitting}>
-            {!isSubmitting ? 'Send' : 'Sending...'}
-          </button>
-          <div className={styles.submitTips}>Ready to innovate?</div>
-        </div>
-      </form>
+          <div className={styles.contentWrapper}>
+            <label>
+              About your project
+              <textarea
+                rows={4}
+                className={styles.content}
+                {...bindInput('content')}
+                required
+              />
+            </label>
+            <div className={styles.tips}>
+              Please touch on these things:
+              <ul>
+                <li>Your product</li>
+                <li>Your timeline</li>
+                <li>Your location</li>
+                <li>Where you heard about us</li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.ctaWrapper}>
+            <button
+              type="submit"
+              className={styles.cta}
+              disabled={isSubmitting}
+            >
+              {!isSubmitting ? 'Send' : 'Sending...'}
+            </button>
+            <div className={styles.submitTips}>get the ball rolling!</div>
+          </div>
+        </form>
+      </>
     );
   }
 }
