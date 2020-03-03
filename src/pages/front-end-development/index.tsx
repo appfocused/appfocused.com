@@ -53,12 +53,10 @@ export default (props: IProps) => {
     <div className={styles.content}>
       <Layout>
         <Helmet>
-          <title>
-            Front-end Development Services - Appfocused UI Development agency
-          </title>
+          <title>Front-end Development Services | Appfocused</title>
           <meta
             name="description"
-            content="Front-end Development Services - Appfocused UI Development agency"
+            content="We deliver great quality user interfaces, fast. Trusted by world's largest organisations. Fast-forward your app's time to market with our all-star front-end team."
           />
         </Helmet>
         <ToastContainer />

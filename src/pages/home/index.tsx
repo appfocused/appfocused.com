@@ -72,7 +72,7 @@ export default (props: IProps) => {
     <div className={styles.content}>
       <Layout>
         <Helmet>
-          <title>Appfocused: great user experiences. Implemented</title>
+          <title>Front-end development experts | Appfocused</title>
           <meta
             name="description"
             content="We believe in digital experiences that make a difference. We build engaging and
