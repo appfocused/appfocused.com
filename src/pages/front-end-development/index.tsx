@@ -100,7 +100,7 @@ export default (props: IProps) => {
         <Section className={styles.rwd}>
           <Grid hasRightSidebar>
             <div className={styles.main}>
-              <h2>Bespoke web app development</h2>
+              <h2>Serious software for ambitious clients</h2>
               <p>
                 We’re creatively led, and strategically minded — existing to
                 create transformative digital experiences for our clients.
