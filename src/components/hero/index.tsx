@@ -10,7 +10,7 @@ import { ReactComponent as ClarksLogo } from '../../assets/client-logos/clarks.s
 import { ReactComponent as DeloitteLogo } from '../../assets/client-logos/deloitte.svg';
 import { ReactComponent as AegonLogo } from '../../assets/client-logos/aegon.svg';
 
-const clients = [DeloitteLogo, GsLogo, ScLogo, JohnLewisLogo, AegonLogo];
+const clients = [DeloitteLogo, ScLogo, JohnLewisLogo, AegonLogo];
 
 const Hero: React.FunctionComponent = () => {
   const props = useSpring({
