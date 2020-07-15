@@ -16,7 +16,7 @@
     "gatsby-plugin-web-font-loader": "1.0.4",
     "gsap": "3.0.5",
     "loader-utils": "1.2.3",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "postcss-mixins": "6.2.3",
     "postcss-nested": "4.2.1",
     "postcss-pxtorem": "4.0.1",
