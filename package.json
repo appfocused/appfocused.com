@@ -23,7 +23,7 @@
     "postcss-reporter": "6.0.1",
     "postcss-simple-vars": "latest",
     "postcss-url": "8.0.0",
-    "prismjs": "1.19.0",
+    "prismjs": "1.21.0",
     "react": "16.12.0",
     "react-burger-menu": "2.6.13",
     "react-dom": "16.12.0",
